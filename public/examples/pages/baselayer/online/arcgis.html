@@ -1,0 +1,15 @@
+<div id="rjContainer"></div>
+<script>
+  var Globe = new XLGlobe.Globe("rjContainer");
+  //ArcGis图层
+  async function createArcgis(){
+  var baselayer = await XLGlobe.Layer.ArcgisImageryProvider({
+          url: "https://server.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+    // url: "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+    showClickFeature: true,
+    visible: true
+  });
+    Globe.addBaseLayer(baselayer);//添加ArcGis图层
+}
+createArcgis();
+</script>

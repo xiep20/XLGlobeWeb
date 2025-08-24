@@ -1,0 +1,76 @@
+<div id="rjContainer"></div>
+<script>
+  var Globe = new XLGlobe.Globe("rjContainer");
+  //天地图影像图层
+  var baselayer1 = new XLGlobe.Layer.TiandituImageryProvider({
+    layer: "img",
+    token: "6a043ce7d3a0791392dd921a6d6f5f29"
+  });
+  //标注图层
+  var baselayer2 = new XLGlobe.Layer.TiandituImageryProvider({
+    layer: "cia",
+    token: "6a043ce7d3a0791392dd921a6d6f5f29"
+  });
+  Globe.addBaseLayer(baselayer1);//添加基础图层
+  Globe.addLayer(baselayer2);//添加标注图层
+
+  var layers = [];
+  //云层图片
+  var imgs = [
+    "img/yuntu/IMK201904120600.png",
+    "img/yuntu/IMK201904120630.png",
+    "img/yuntu/IMK201904120700.png",
+    "img/yuntu/IMK201904120730.png",
+    "img/yuntu/IMK201904120800.png",
+    "img/yuntu/IMK201904120830.png",
+    "img/yuntu/IMK201904120900.png",
+    "img/yuntu/IMK201904120930.png",
+    "img/yuntu/IMK201904121000.png",
+    "img/yuntu/IMK201904121030.png",
+    "img/yuntu/IMK201904121100.png",
+    "img/yuntu/IMK201904121130.png",
+    "img/yuntu/IMK201904121200.png"
+  ];
+  var x = 0;
+  for (var i = 0; i < imgs.length; i++) {
+    //创建图片图层
+      var im = XLGlobe.Layer.createImageryProvider({
+      "type": "image",
+      "url": config.dataUrl + imgs[i],
+      rectangle: {
+        xmin: 74.02,
+        xmax: -154.1,
+        ymin: -59.63,
+        ymax: 59.63
+      }
+    });
+    im.readyPromise.then(function (e) {
+      x++;
+      if (x == imgs.length) {
+        changeCloundAlpha();
+      }
+      console.log('图片加载完成');
+    });
+    var layer = new Cesium.ImageryLayer(im, {
+      alpha: 0
+    });
+    Globe.viewer.imageryLayers.add(layer),
+      layers.push(layer);
+  }
+  //改变云层透明度
+  function changeCloundAlpha() {
+    var i = 0;
+    setInterval(() => {
+      if (i == 0) {
+        layers[imgs.length - 1].alpha = 0;
+      } else {
+        layers[i - 1].alpha = 0;
+      }
+      layers[i].alpha = 1;
+      i++;
+      if (i == imgs.length) {
+        i = 0;
+      }
+    }, 300);
+  }
+</script>

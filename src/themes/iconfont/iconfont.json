@@ -1,0 +1,79 @@
+{
+  "id": "2117333",
+  "name": "XLGlobeWeb",
+  "font_family": "iconfont",
+  "css_prefix_text": "el-icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6659723",
+      "name": "分析,数据",
+      "font_class": "analysis",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "1242317",
+      "name": "指南",
+      "font_class": "iconkaifazhinan",
+      "unicode": "e6aa",
+      "unicode_decimal": 59050
+    },
+    {
+      "icon_id": "9074005",
+      "name": "4_12潜能开发",
+      "font_class": "iconleicankao",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "2338294",
+      "name": "模型",
+      "font_class": "moxing",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "3396554",
+      "name": "数据",
+      "font_class": "shuju",
+      "unicode": "e6a6",
+      "unicode_decimal": 59046
+    },
+    {
+      "icon_id": "6232430",
+      "name": "简介",
+      "font_class": "jianjie",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "11298720",
+      "name": "可视化",
+      "font_class": "keshihua",
+      "unicode": "e6c4",
+      "unicode_decimal": 59076
+    },
+    {
+      "icon_id": "13611009",
+      "name": "场景",
+      "font_class": "changjing",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "17318025",
+      "name": "矢量",
+      "font_class": "shiliang",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "17495315",
+      "name": "底图",
+      "font_class": "ditu",
+      "unicode": "e7fa",
+      "unicode_decimal": 59386
+    }
+  ]
+}
