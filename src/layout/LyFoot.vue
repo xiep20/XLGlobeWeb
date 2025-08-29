@@ -65,7 +65,7 @@ export default {
   computed: {
     footClass() {
       let clazz = ''
-      if (this.$route.path === '/editor') {
+      if (this.$route.path === '/editor' || this.$route.path === '/deveditor') {
         clazz = 'hide-foot'
       } else {
         clazz = ''

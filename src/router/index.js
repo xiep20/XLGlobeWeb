@@ -1,9 +1,3 @@
-/*
- * @Author: Caven
- * @Date: 2019-12-23 13:38:32
- * @Last Modified by: Caven
- * @Last Modified time: 2020-03-31 13:25:14
- */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
@@ -32,6 +26,16 @@ const routes = [
         component: () => import('../views/examples/index.vue')
       },
       {
+        path: '/cesiumexamples',
+        name: 'cesiumexamples',
+        component: () => import('../views/cesiumexamples/index.vue')
+      },
+      {
+        path: '/sceneexamples',
+        name: 'sceneexamples',
+        component: () => import('../views/sceneexamples/index.vue')
+      },
+      {
         path: '/docs/:nameId',
         name: 'docs',
         component: () => import('../views/docs/index.vue')
@@ -45,6 +49,11 @@ const routes = [
         path: '/editor',
         name: 'editor',
         component: () => import('../views/editor/index.vue')
+      },
+      {
+        path: '/deveditor',
+        name: 'deveditor',
+        component: () => import('../components/demodoc/Editor.vue')
       }
     ]
   }

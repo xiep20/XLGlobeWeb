@@ -18,6 +18,8 @@
       >
         <el-menu-item index="/index">首页</el-menu-item>
         <el-menu-item index="/examples">功能示例</el-menu-item>
+        <el-menu-item index="/cesiumexamples">原生Cesium</el-menu-item>
+        <el-menu-item index="/sceneexamples">场景示例</el-menu-item>
         <el-submenu index="/docs">
           <template slot="title">开发文档</template>
             <el-menu-item index="/docs/1-1-1">开发指南</el-menu-item>
@@ -51,7 +53,7 @@ export default {
   computed: {
     headClass() {
       let clazz = ''
-      if (this.$route.path === '/editor') {
+      if (this.$route.path === '/editor' || this.$route.path === '/deveditor') {
         clazz = 'hide-head'
       } else if (
         this.$route.path !== '/index' &&
