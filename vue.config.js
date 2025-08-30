@@ -26,20 +26,19 @@ module.exports = {
       }
     },
     proxy: {
-      '/wuhan_20201014/data': {
-        // target: 'http://182.92.97.92:8081/',
-        target: 'http://localhost:8083/',
+      '/data09': {
+        target: 'http://localhost:9009/',
         changeOrigin: true,
         pathRewrite: {
-          '^/wuhan_20201014/data': '/data'
+          '^/data09': '/data'
         }
       },
       '/wuhan_20201014': {
         // target: 'http://182.92.97.92:8081/',
-        target: 'http://192.168.1.15:8080/',
+        target: 'http://localhost:9009/',
         changeOrigin: true,
         pathRewrite: {
-          '^/wuhan_20201014': '/wuhan_20201014'
+          '^/wuhan_20201014': '/data/wuhan_20201014'
         }
       }
     }
