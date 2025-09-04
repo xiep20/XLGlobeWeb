@@ -33,12 +33,19 @@ module.exports = {
           '^/data09': '/data'
         }
       },
-      '/wuhan_20201014': {
-        // target: 'http://182.92.97.92:8081/',
-        target: 'http://localhost:9009/',
+      '/data95': {
+        target: 'http://localhost:8095/',
         changeOrigin: true,
         pathRewrite: {
-          '^/wuhan_20201014': '/data/wuhan_20201014'
+          '^/data95': '/data95'
+        }
+      },
+      '/wuhan_20201014': {
+        // target: 'http://182.92.97.92:8081/',
+        target: 'http://localhost:8095/',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/wuhan_20201014': '/data95/wuhan_20201014'
         }
       }
     }

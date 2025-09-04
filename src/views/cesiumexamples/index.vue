@@ -134,15 +134,15 @@ export default {
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .card {
-  background: #fff;
+  background: #f3f3f3;
   border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -208,6 +208,11 @@ export default {
   display: flex;
   align-items: center;
   gap: 15px;
+  position: fixed;
+  top: 61px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   
   .back-button {
     font-size: 16px;
@@ -227,7 +232,8 @@ export default {
 
 .content-body {
   flex: 1;
-  overflow: hidden;
+  overflow: auto;
+  margin-top: 64px;
 }
 
 .mscroll {
