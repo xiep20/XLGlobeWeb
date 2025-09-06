@@ -10,10 +10,31 @@
         },
         {
             "name": "模型压平",
-            "image": "images/menu/baselayer/online/flatten.png",
+            "image": "images/menu/analysis/flatten.png",
             "tags": ["模型压平", "着色器"],
             "description": "模型压平示例，展示如何使用Cesium加载模型压平。",
             "mdUrl": "cesiumDemo/pages/flatten/flattenTileset.md"
+        },
+        {
+            "name": "建筑退让",
+            "image": "images/menu/analysis/buildingSetback.png",
+            "tags": ["建筑退让", "相交分析"],
+            "description": "建筑退让示例，展示如何使用Cesium加载建筑退让。",
+            "mdUrl": "cesiumDemo/pages/buildingSetback/buildingSetback.md"
+        },
+        {
+            "name": "建筑间距",
+            "image": "images/menu/analysis/buildingSpacing.png",
+            "tags": ["建筑间距", "缓冲分析"],
+            "description": "建筑间距示例，展示如何使用Cesium加载建筑间距。",
+            "mdUrl": "cesiumDemo/pages/buildingSpacing/buildingSpacing.md"
+        },
+        {
+            "name": "限高分析",
+            "image": "images/menu/analysis/heightLimit.png",
+            "tags": ["限高分析"],
+            "description": "限高分析示例，展示如何使用Cesium加载限高分析。",
+            "mdUrl": "cesiumDemo/pages/heightLimit/heightLimit.md"
         }
     ]
 }
