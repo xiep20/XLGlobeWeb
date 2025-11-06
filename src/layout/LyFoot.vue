@@ -18,7 +18,7 @@
           <div class="menu-link" @click="linkFun">XLMap For Web</div>
           <div class="menu-link" @click="linkFun">XLMapGL For Web</div>
           <div class="menu-link" @click="linkFun">XLMap For Server</div>
-          <div class="menu-link" @click="linkFun">XLGlobe For WebGL</div>
+          <div class="menu-link" @click="linkFun">XLGlobeWeb for Cesium</div>
           <div class="menu-link" @click="linkFun">XLGlobe For Server</div>
           <div class="menu-link" @click="linkFun">XLMap For DataStore</div>
           <div class="menu-link" @click="linkFun">XLGlobe For DataStore</div>
@@ -89,7 +89,7 @@ export default {
         case 'XLMap For Server':
           window.open('http://103.94.20.254:9093/#/', '_blank')
           break
-        case 'XLGlobe For WebGL':
+        case 'XLGlobeWeb for Cesium':
           window.open(
             'http://103.94.20.254:6090/XLGlobeWeb_V2.0/#/index',
             '_blank'

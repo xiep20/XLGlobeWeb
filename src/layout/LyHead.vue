@@ -3,7 +3,7 @@
     <div class="title">
       <img src="../assets/images/favicon.png" />
       <font style="color: #fff; margin-left: 10px"
-        >XLGlobe For WebGL<span style="font-size: 12px"> （V2.0）</span></font
+        >XLGlobeWeb for Cesium<span style="font-size: 12px"> （V2.0）</span></font
       >
     </div>
     <div class="menu-h">

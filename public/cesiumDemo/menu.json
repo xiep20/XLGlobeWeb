@@ -9,6 +9,13 @@
             "mdUrl": "cesiumDemo/pages/tdt/tdt.md"
         },
         {
+            "name": "地形坡度分析",
+            "image": "images/menu/analysis/slope.png",
+            "tags": ["坡度分析", "地形分析"],
+            "description": "地形坡度分析示例，展示如何使用Cesium计算和可视化地形坡度。",
+            "mdUrl": "cesiumDemo/pages/slope/slope.md"
+        },
+        {
             "name": "模型压平",
             "image": "images/menu/analysis/flatten.png",
             "tags": ["模型压平", "着色器"],
