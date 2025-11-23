@@ -278,7 +278,7 @@
         async function addModel() {
                 console.log('开始加载3D模型...');
                 let layer = await Cesium.Cesium3DTileset.fromUrl(
-                    "/data95/项目/模型/Tileset.json"
+                    "/data95/wuhan_20201014/3dtiles/xiaoqu/Tileset.json"
                 );
                 
                 tileset = viewer.scene.primitives.add(layer);

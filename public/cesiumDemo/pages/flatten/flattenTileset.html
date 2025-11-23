@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cesium 加载天地图</title>
+    <title>Cesium 模型压平</title>
     <script src="libs/Cesium1.130/Cesium.js"></script>
     <link href="libs/Cesium1.130/Widgets/widgets.css" rel="stylesheet">
     <style>
-        html, body{
+        html,
+        body {
             width: 100%;
             height: 100%;
             margin: 0;
             padding: 0;
             overflow: hidden;
         }
+
         #cesiumContainer {
             width: 100%;
             height: 100%;
@@ -21,6 +24,7 @@
             padding: 0;
             overflow: hidden;
         }
+
         .flatten-button {
             position: absolute;
             top: 10px;
@@ -34,9 +38,11 @@
             cursor: pointer;
             margin-left: 10px;
         }
+
         .flatten-button:hover {
             background-color: #45a049;
         }
+
         .cancel-button {
             position: absolute;
             top: 10px;
@@ -49,11 +55,13 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
         .cancel-button:hover {
             background-color: #da190b;
         }
     </style>
 </head>
+
 <body>
     <div id="cesiumContainer"></div>
     <button id="flattenButton" class="flatten-button">压平模型</button>
@@ -113,7 +121,7 @@
         // 加载模型
         async function addModel() {
              let layer = await Cesium.Cesium3DTileset.fromUrl(
-                "/data09/wuhan_20201014/3dtiles/data/Tileset.json"
+                "/data95/wuhan_20201014/3dtiles/data/Tileset.json"
             );
             tileset =viewer.scene.primitives.add(layer);
             
@@ -171,4 +179,5 @@
         }
     </script>
 </body>
+
 </html>

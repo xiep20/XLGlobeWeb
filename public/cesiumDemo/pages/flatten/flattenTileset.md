@@ -105,7 +105,7 @@ flattenTool.setFlatHeight(tileset, 50);
 
 ### 示例展示 <p align="right"><a href="#/deveditor?examplePath=/cesiumDemo/pages/flatten/flattenTileset.html" target="_blank">Demo</a></p>
 
-<iframe width="100%" height="430" src="#/deveditor?examplePath=/cesiumDemo/pages/flatten/flattenTileset.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="430" src="#/deveditor?examplePath=/cesiumDemo/pages/flatten/flattenTileset.html" sandbox="allow-scripts" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 &emsp; 
 

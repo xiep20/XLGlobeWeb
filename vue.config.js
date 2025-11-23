@@ -26,13 +26,6 @@ module.exports = {
       }
     },
     proxy: {
-      '/data09': {
-        target: 'http://localhost:9009/',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/data09': '/data'
-        }
-      },
       '/data95': {
         target: 'http://localhost:8095/',
         changeOrigin: true,

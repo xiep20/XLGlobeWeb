@@ -96,7 +96,7 @@ clearBtn.addEventListener('click', function() {
 
 ### 示例展示 <p align="right"><a href="#/deveditor?examplePath=/cesiumDemo/pages/buildingSetback/buildingSetback.html" target="_blank">Demo</a></p>
 
-<iframe width="100%" height="430" src="#/deveditor?examplePath=/cesiumDemo/pages/buildingSetback/buildingSetback.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="430" src="#/deveditor?examplePath=/cesiumDemo/pages/buildingSetback/buildingSetback.html" sandbox="allow-scripts" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 &emsp; 
 

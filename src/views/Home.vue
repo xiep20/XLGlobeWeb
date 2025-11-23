@@ -25,26 +25,26 @@ export default {
     document.oncontextmenu = new Function('event.returnValue=false')
     document.onselectstart = new Function('event.returnValue=false')
     
-    // 检查是否是第一次访问
-    const hasShownDialog = sessionStorage.getItem('versionUpgradeDialogShown')
-    if (!hasShownDialog) {
-      // 显示版本升级提示对话框
-      this.$msgbox({
-        title: '版本升级提示',
-        message: '当前sdk依赖cesium版本较低，目前正在升级更新中，部分示例不可用，仅供参考源码之用，请见谅！',
-        showCancelButton: false,
-        confirmButtonText: '确定',
-        type: 'info',
-        center: true,
-        customClass: 'version-upgrade-dialog'
-      }).then(() => {
-        // 用户点击确定后，标记为已显示
-        sessionStorage.setItem('versionUpgradeDialogShown', 'true')
-      }).catch(() => {
-        // 用户点击确定后的处理
-        sessionStorage.setItem('versionUpgradeDialogShown', 'true')
-      })
-    }
+    // // 检查是否是第一次访问
+    // const hasShownDialog = sessionStorage.getItem('versionUpgradeDialogShown')
+    // if (!hasShownDialog) {
+    //   // 显示版本升级提示对话框
+    //   this.$msgbox({
+    //     title: '版本升级提示',
+    //     message: '当前sdk依赖cesium版本较低，目前正在升级更新中，部分示例不可用，仅供参考源码之用，请见谅！',
+    //     showCancelButton: false,
+    //     confirmButtonText: '确定',
+    //     type: 'info',
+    //     center: true,
+    //     customClass: 'version-upgrade-dialog'
+    //   }).then(() => {
+    //     // 用户点击确定后，标记为已显示
+    //     sessionStorage.setItem('versionUpgradeDialogShown', 'true')
+    //   }).catch(() => {
+    //     // 用户点击确定后的处理
+    //     sessionStorage.setItem('versionUpgradeDialogShown', 'true')
+    //   })
+    // }
   }
 }
 </script>
