@@ -129,6 +129,68 @@ class BuildingDistanceAnalyzer {
   }
 
   /**
+   * 从单个多边形创建建筑对象（内部辅助方法）
+   * @param {Object} feature - GeoJSON Feature对象
+   * @param {Array} coordinates - 多边形坐标数组
+   * @param {number} height - 建筑高度
+   * @param {Cesium.Color} color - 建筑颜色
+   * @param {Object} options - 建筑选项
+   * @param {number} [polyIndex] - 多边形索引（用于MultiPolygon时生成唯一ID）
+   * @returns {Object|null} 建筑对象
+   * @private
+   */
+  _createBuildingFromPolygon (feature, coordinates, height, color, options, polyIndex = null) {
+    const id = options.id || Cesium.createGuid()
+    const uniqueId = polyIndex !== null ? `${id}_${polyIndex}` : id
+
+    const positions = coordinates.map(coord =>
+      Cesium.Cartesian3.fromDegrees(coord[0], coord[1], 0)
+    )
+
+    if (positions.length < 3) {
+      console.warn('Invalid polygon: less than 3 vertices')
+      return null
+    }
+
+    const entity = this.viewer.entities.add({
+      id: uniqueId,
+      name: feature.properties?.name || `Building_${uniqueId}`,
+      polygon: {
+        hierarchy: new Cesium.PolygonHierarchy(positions),
+        extrudedHeight: height,
+        material: color,
+        outline: false,
+        show: this.options.showBuilding // 控制是否显示
+      }
+    })
+
+    let outlineEntity = null
+    if (this.options.showBuildingOutline) {
+      outlineEntity = this.viewer.entities.add({
+        polyline: {
+          positions: [...positions, positions[0]],
+          width: this.options.buildingOutlineWidth,
+          material: this.options.buildingOutlineColor,
+          clampToGround: true
+        }
+      })
+    }
+
+    // 优化采样点数量
+    const groundPoints = this._sampleGroundPoints(positions, 5, 100)
+
+    return {
+      id: uniqueId,
+      geoJson: feature,
+      entity,
+      outlineEntity,
+      groundPoints,
+      height,
+      properties: feature.properties || {}
+    }
+  }
+
+  /**
    * 添加GeoJSON格式的建筑数据
    * @param {Object|string} geoJson - GeoJSON对象或字符串
    * @param {Object} options - 建筑选项
@@ -151,63 +213,52 @@ class BuildingDistanceAnalyzer {
       const newBuildings = []
 
       for (const feature of features) {
-        if (!feature.geometry || feature.geometry.type !== 'Polygon') {
-          console.warn('Skipping non-polygon feature')
+        if (!feature.geometry) {
+          console.warn('Skipping feature without geometry')
           continue
         }
 
-        const id = options.id || Cesium.createGuid()
+        const geometryType = feature.geometry.type
         const height = options.height || 20
         const color = options.color || Cesium.Color.fromRandom({ alpha: 0.7 })
 
-        const coordinates = feature.geometry.coordinates[0]
-        const positions = coordinates.map(coord =>
-          Cesium.Cartesian3.fromDegrees(coord[0], coord[1], 0)
-        )
-
-        if (positions.length < 3) {
-          throw new Error('Invalid polygon: less than 3 vertices')
-        }
-
-        const entity = this.viewer.entities.add({
-          id,
-          name: feature.properties?.name || `Building_${id}`,
-          polygon: {
-            hierarchy: new Cesium.PolygonHierarchy(positions),
-            extrudedHeight: height,
-            material: color,
-            outline: false,
-            show: this.options.showBuilding // 控制是否显示
+        // 处理 Polygon 类型
+        if (geometryType === 'Polygon') {
+          const building = this._createBuildingFromPolygon(
+            feature,
+            feature.geometry.coordinates[0],
+            height,
+            color,
+            options
+          )
+          if (building) {
+            this.buildings.push(building)
+            newBuildings.push(building)
           }
-        })
-
-        let outlineEntity = null
-        if (this.options.showBuildingOutline) {
-          outlineEntity = this.viewer.entities.add({
-            polyline: {
-              positions: [...positions, positions[0]],
-              width: this.options.buildingOutlineWidth,
-              material: this.options.buildingOutlineColor,
-              clampToGround: true
+        } else if (geometryType === 'MultiPolygon') {
+          // 处理 MultiPolygon 类型
+          const polygons = feature.geometry.coordinates
+          for (let polyIndex = 0; polyIndex < polygons.length; polyIndex++) {
+            const polygonCoords = polygons[polyIndex]
+            // MultiPolygon 中每个元素是一个多边形（可能有外环和内环）
+            const outerRing = polygonCoords[0]
+            const building = this._createBuildingFromPolygon(
+              feature,
+              outerRing,
+              height,
+              color,
+              options,
+              polyIndex // 传入多边形索引用于生成唯一ID
+            )
+            if (building) {
+              this.buildings.push(building)
+              newBuildings.push(building)
             }
-          })
+          }
+        } else {
+          console.warn(`Skipping unsupported geometry type: ${geometryType}`)
+          continue
         }
-
-        // 优化采样点数量
-        const groundPoints = this._sampleGroundPoints(positions, 5, 100)
-
-        const building = {
-          id,
-          geoJson: feature,
-          entity,
-          outlineEntity,
-          groundPoints,
-          height,
-          properties: feature.properties || {}
-        }
-
-        this.buildings.push(building)
-        newBuildings.push(building)
       }
 
       return newBuildings
