@@ -1,10 +1,24 @@
 {
   "id": "2117333",
-  "name": "XLGlobeWeb",
+  "name": "DEUGlobeWeb",
   "font_family": "iconfont",
   "css_prefix_text": "el-icon-",
   "description": "",
   "glyphs": [
+    {
+      "icon_id": "25052963",
+      "name": "展开",
+      "font_class": "zhankai",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "42635761",
+      "name": "收起",
+      "font_class": "shouqi1",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
     {
       "icon_id": "6659723",
       "name": "分析,数据",

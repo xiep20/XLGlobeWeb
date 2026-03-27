@@ -7,28 +7,26 @@
           <el-button
             type="warning"
             title="重置"
-            size="mini"
-            icon="el-icon-refresh"
+            size="small"
             @click="reset"
             >重置</el-button
           >
           <el-button
             type="success"
-            size="mini"
+            size="small"
             title="运行"
-            icon="el-icon-video-play"
             @click="run"
             >运行</el-button
           >
         </div>
       </div>
       <div class="content">
-        <el-tabs v-model="activeName" @tab-click="tabClickHandler">
+        <el-tabs v-model="activeName" @tab-click="handleTabClick">
           <el-tab-pane label="JS" name="js-editor">
-            <div class="js-editor" ref="js-editor"></div>
+            <div class="js-editor" ref="jsEditorRef"></div>
           </el-tab-pane>
           <el-tab-pane label="HTML" name="html-editor">
-            <div class="html-editor" ref="html-editor"></div>
+            <div class="html-editor" ref="htmlEditorRef"></div>
           </el-tab-pane>
         </el-tabs>
       </div>
@@ -37,191 +35,257 @@
       class="option hidden-md-and-down"
       :style="{ left: !codeVisible ? '10px' : 'calc(30% + 10px)' }"
     >
-      <span v-if="!codeVisible">
-        <svg-icon
-          icon-class="expand"
-          class-name="svg-icon"
-          @on-click="codeVisible = true"
-        ></svg-icon
-        >源码
+    
+      <span v-if="!codeVisible" @click="codeVisible = true">
+          <i class="iconfont el-icon-zhankai"></i> 源码
       </span>
-      <span v-if="codeVisible">
-        <svg-icon
-          icon-class="shrink"
-          class-name="svg-icon"
-          @on-click="codeVisible = false"
-        ></svg-icon
-        >收缩
+      <span v-if="codeVisible" @click="codeVisible = false">
+        <i class="iconfont el-icon-shouqi1"></i> 收缩
       </span>
     </div>
     <div
       class="example"
-      ref="example"
+      ref="exampleRef"
       :style="{ width: codeVisible ? '70%' : '100%' }"
     ></div>
   </div>
 </template>
-<script>
+<script setup>
+import { ref, nextTick, onMounted, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import axios from 'axios'
 import * as monaco from 'monaco-editor'
+import editorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker';
+import jsonWorker from 'monaco-editor/esm/vs/language/json/json.worker?worker';
+import cssWorker from 'monaco-editor/esm/vs/language/css/css.worker?worker';
+import htmlWorker from 'monaco-editor/esm/vs/language/html/html.worker?worker';
+import tsWorker from 'monaco-editor/esm/vs/language/typescript/ts.worker?worker';
 
-export default {
-  name: 'EditorIndex',
-  data() {
-    return {
-      activeName: 'js-editor',
-      type: '',
-      example: '',
-      label: '',
-      tempHtml: '',
-      oriHtmlStr: '',
-      htmlStr: '',
-      cssStr: '',
-      importjsStr:'',
-      oriJsStr: '',
-      jsStr: '',
-      otherJsStr: '',
-      htmlEditor: null,
-      jsEditor: null,
-      codeVisible: false
+self.MonacoEnvironment = {
+  getWorker(_, label) {
+    if (label === 'json') {
+      return new jsonWorker();
     }
-  },
-  watch: {
-    codeVisible(newValue) {
-      if (newValue) {
-        this.$nextTick(() => {
-          this.createEditor()
-        })
-      }
+    if (label === 'css' || label === 'scss' || label === 'less') {
+      return new cssWorker();
     }
-  },
-  methods: {
-    createEditor() {
-      let config = {
-        theme: 'vs-dark',
-        formatOnPaste: true,
-        fontSize: 14,
-        scrollbar: {
-          verticalScrollbarSize: 2
-        }
-      }
-      if (this.activeName === 'js-editor') {
-        if (!this.jsEditor) {
-          this.jsEditor = monaco.editor.create(this.$refs['js-editor'], {
-            language: 'javascript',
-            ...config
-          })
-          this.jsEditor.setValue(this.jsStr)
-        } else {
-          this.jsEditor.setValue(this.jsStr)
-        }
-      } else if (this.activeName === 'html-editor') {
-        if (!this.htmlEditor) {
-          this.htmlEditor = monaco.editor.create(this.$refs['html-editor'], {
-            language: 'html',
-            ...config
-          })
-          this.htmlEditor.setValue(this.htmlStr)
-        } else {
-          this.htmlEditor.setValue(this.htmlStr)
-        }
-      }
-    },
-    reset() {
-      this.jsStr = this.oriJsStr
-      this.htmlStr = this.oriHtmlStr
-      this.jsEditor && this.jsEditor.setValue(this.jsStr)
-      this.htmlEditor && this.htmlEditor.setValue(this.htmlStr)
-      this.loadExample()
-    },
-    run() {
-      this.jsStr = this.jsEditor ? this.jsEditor.getValue() : this.oriJsStr
-      this.htmlStr = this.htmlEditor
-        ? this.htmlEditor.getValue()
-        : this.oriHtmlStr
-      this.loadExample()
-    },
-    getTempPage() {
-      return axios.get('examples/pages/temp.html')
-    },
-    getExamplePage() {
-      return axios.get(`examples/pages/${this.type}/${this.example}.html`)
-    },
-    loadExample() {
-      let iFrame = this.createIFrame()
-      document.getElementsByTagName('title')[0].innerText=this.label;
-      iFrame.contentWindow['XLGlobe'] = window.XLGlobe
-      let iframeDocument = iFrame.contentWindow.document
-      iframeDocument.open()
-      let content = this.htmlStr + this.otherJsStr + '<script>' + this.jsStr + '<' +  '/script>'
-      let csscont = this.cssStr
-      iframeDocument.write(this.tempHtml.replace('.cssTemp {}', csscont).replace('<importjs></importjs>',this.importjsStr).replace('<htmlTemp />', content))
-      iframeDocument.close()
-    },
-    createIFrame() {
-      let examplePage = this.$refs['example']
-      examplePage.innerHTML = ''
-      let iframe = document.createElement('iframe')
-      iframe.setAttribute('id', 'innerPage')
-      iframe.setAttribute('name', 'innerPage')
-      examplePage.append(iframe)
-      return iframe
-    },
-    tabClickHandler(tab) {
-      this.$nextTick(() => {
-        this.createEditor()
-      })
+    if (label === 'html' || label === 'handlebars' || label === 'razor') {
+      return new htmlWorker();
     }
+    if (label === 'typescript' || label === 'javascript') {
+      return new tsWorker();
+    }
+    return new editorWorker();
   },
-  mounted() {
-    this.$nextTick(() => {
-      if (this.$route) {
-        let query = this.$route.query
-        this.type = query.type
-        this.example = query.example
-        this.label = query.label
-        Promise.all([this.getTempPage(), this.getExamplePage()]).then(
-          ([tempPage, examplePage]) => {
-            this.tempHtml = tempPage.data
-            let exampleHtml = examplePage.data
-            if (exampleHtml && this.tempHtml) {
-              let index1 = exampleHtml.indexOf('</style>')
-              if (index1 >= 0) {
-                this.cssStr = exampleHtml.substr(7, index1-7)
-                exampleHtml = exampleHtml.substr(index1+8)
-              }
-              let importjsindex = exampleHtml.indexOf('</importjs>')
-              if (importjsindex >= 0) {
-              let importjsindexstart = exampleHtml.indexOf('<importjs>')
-                this.importjsStr = exampleHtml.substr(importjsindexstart+10, importjsindex-12)
-                exampleHtml=exampleHtml.replace(/<importjs>[\w\W]*<\/importjs>/g,'')
-              }
-              let index = exampleHtml.indexOf('<script>')
-              let index2 = exampleHtml.indexOf('<&other&>')
-              if (index2 >= 0) {
-                this.oriHtmlStr = exampleHtml.substr(0, index2)
-                this.otherJsStr = exampleHtml
-                  .substr(index2, index - index2)
-                  .replace(/&other&/g, 'script')
-              } else {
-                this.oriHtmlStr = exampleHtml.substr(0, index)
-              }
-              this.oriJsStr = exampleHtml
-                .substr(index)
-                .replace('<script>', '')
-                .replace(/<\/script>/g, '')
-              this.jsStr = this.oriJsStr
-              this.htmlStr = this.oriHtmlStr
-              this.loadExample()
-            }
+};
+const route = useRoute()
+
+// tabs / 代码区状态
+const activeName = ref('js-editor')
+const codeVisible = ref(false)
+
+// 示例页面相关数据
+const type = ref('')
+const example = ref('')
+const label = ref('')
+const tempHtml = ref('')
+const oriHtmlStr = ref('')
+const htmlStr = ref('')
+const cssStr = ref('')
+const importjsStr = ref('')
+const oriJsStr = ref('')
+const jsStr = ref('')
+const otherJsStr = ref('')
+
+// 编辑器与预览容器引用
+const jsEditorRef = ref(null)
+const htmlEditorRef = ref(null)
+
+const exampleRef = ref(null)
+
+// monaco 实例
+const jsEditor = ref(null)
+const htmlEditor = ref(null)
+
+// 处理 tab 切换
+function handleTabClick(tab) {
+  nextTick(() => {
+    createEditor()
+  })
+}
+
+function createEditor() {
+  // 确保 DOM 元素存在
+  if (!jsEditorRef.value && !htmlEditorRef.value) {
+    console.warn('Editor container not found');
+    return;
+  }
+
+  const config = {
+    theme: 'vs-dark',
+    formatOnPaste: true,
+    fontSize: 14,
+    scrollbar: {
+      verticalScrollbarSize: 2
+    }
+  }
+
+    if (activeName.value === 'js-editor') {
+      if (!jsEditor.value && jsEditorRef.value) {
+        console.log('Creating JS editor');
+        jsEditor.value = monaco.editor.create(jsEditorRef.value, {
+          value: jsStr.value,
+          language: 'javascript',
+          ...config
+        });
+        console.log('JS editor created successfully');
+      }
+    } else if (activeName.value === 'html-editor') {
+      if (!htmlEditor.value && htmlEditorRef.value) {
+        console.log('Creating HTML editor');
+        htmlEditor.value = monaco.editor.create(htmlEditorRef.value, {
+          value: htmlStr.value,
+          language: 'html',
+          ...config
+        });
+        console.log('HTML editor created successfully');
+      }
+      // if (htmlEditor.value) {
+      //   htmlEditor.value.setValue(htmlStr.value);
+      // }
+    }
+}
+
+function reset() {
+  jsStr.value = oriJsStr.value
+  htmlStr.value = oriHtmlStr.value
+  if (jsEditor.value) {
+    jsEditor.value.setValue(jsStr.value)
+  }
+  if (htmlEditor.value) {
+    htmlEditor.value.setValue(htmlStr.value)
+  }
+  loadExample()
+}
+
+function run() {
+  jsStr.value = jsEditor.value ? jsEditor.value.getValue() : oriJsStr.value
+  htmlStr.value = htmlEditor.value ? htmlEditor.value.getValue() : oriHtmlStr.value
+  loadExample()
+}
+
+function getTempPage() {
+  return axios.get('examples/pages/temp.html')
+}
+
+function getExamplePage() {
+  return axios.get(`examples/pages/${type.value}/${example.value}.html`)
+}
+
+function createIFrame() {
+  const exampleEl = exampleRef.value
+  if (!exampleEl) {
+    return null
+  }
+  exampleEl.innerHTML = ''
+  const iframe = document.createElement('iframe')
+  iframe.setAttribute('id', 'innerPage')
+  iframe.setAttribute('name', 'innerPage')
+  exampleEl.append(iframe)
+  return iframe
+}
+
+function loadExample() {
+  const iFrame = createIFrame()
+  if (!iFrame) {
+    return
+  }
+  const titleEls = document.getElementsByTagName('title')
+  if (titleEls && titleEls[0]) {
+    titleEls[0].innerText = label.value
+  }
+  iFrame.contentWindow.XLGlobe = window.XLGlobe
+  const iframeDocument = iFrame.contentWindow.document
+  iframeDocument.open()
+  const content =
+    htmlStr.value + otherJsStr.value + '<script>' + jsStr.value + '<' + '/script>'
+  const csscont = cssStr.value
+  iframeDocument.write(
+    tempHtml.value
+      .replace('.cssTemp {}', csscont)
+      .replace('<importjs></importjs>', importjsStr.value)
+      .replace('<htmlTemp />', content)
+  )
+  iframeDocument.close()      
+}
+
+onMounted(() => {
+  nextTick(() => {
+    const query = route.query || {}
+    type.value = query.type || ''
+    example.value = query.example || ''
+    label.value = query.label || ''
+
+    if (!type.value || !example.value) {
+      return
+    }
+
+    Promise.all([getTempPage(), getExamplePage()])
+      .then(([tempPage, examplePage]) => {
+        tempHtml.value = tempPage.data
+        let exampleHtml = examplePage.data
+        if (exampleHtml && tempHtml.value) {
+          const index1 = exampleHtml.indexOf('</style>')
+          if (index1 >= 0) {
+            cssStr.value = exampleHtml.substr(7, index1 - 7)
+            exampleHtml = exampleHtml.substr(index1 + 8)
           }
-        ).catch((error) => {
-          console.error('Failed to load example pages:', error)
-        })
-      }
+          const importjsindex = exampleHtml.indexOf('</importjs>')
+          if (importjsindex >= 0) {
+            const importjsindexstart = exampleHtml.indexOf('<importjs>')
+            importjsStr.value = exampleHtml.substr(
+              importjsindexstart + 10,
+              importjsindex - 12
+            )
+            exampleHtml = exampleHtml.replace(/<importjs>[\w\W]*<\/importjs>/g, '')
+          }
+          const index = exampleHtml.indexOf('<script>')
+          const index2 = exampleHtml.indexOf('<&other&>')
+          if (index2 >= 0) {
+            oriHtmlStr.value = exampleHtml.substr(0, index2)
+            otherJsStr.value = exampleHtml
+              .substr(index2, index - index2)
+              .replace(/&other&/g, 'script')
+          } else {
+            oriHtmlStr.value = exampleHtml.substr(0, index)
+          }
+          oriJsStr.value = exampleHtml
+            .substr(index)
+            .replace('<script>', '')
+            .replace(/<\/script>/g, '')
+          jsStr.value = oriJsStr.value
+          htmlStr.value = oriHtmlStr.value
+          loadExample()
+          if (codeVisible.value) {
+            nextTick(() => {
+              createEditor()
+            })
+          }
+        }
+      })
+      .catch((error) => {
+        console.error('Failed to load example pages:', error)
+      })
+  })
+})
+// 监听 codeVisible 变化
+watch(codeVisible, (newValue) => {
+  if (newValue) {
+    nextTick(() => {
+      createEditor()
     })
   }
-}
+})
 </script>
 
 <style lang="scss">
@@ -262,7 +326,7 @@ export default {
       padding: 0 2px;
       .js-editor,
       .html-editor {
-        height: 1000px;
+        height: calc(100vh - 100px);
       }
     }
   }
@@ -281,9 +345,10 @@ export default {
       height: 100%;
       display: flex;
       align-items: center;
-      .svg-icon {
+      i {
         width: 20px;
         height: 20px;
+        line-height: 20px;
         margin: 0px 5px;
       }
     }

@@ -1,0 +1,26 @@
+{
+  "treeData": {
+    "id": "root",
+    "label": "WebGPU",
+    "children": [
+      {
+        "id": "webgpu-hello",
+        "title": "WebGPU 入门",
+        "description": "WebGPU 基础示例",
+        "image": "",
+        "type": "demo",
+        "component": "webgpu/demos/Hello",
+        "tags": ["WebGPU"]
+      },
+      {
+        "id": "webgpu-doc", 
+        "title": "WebGPU 规范",
+        "description": "规范与文档链路。",
+        "image": "",
+        "type": "link",
+        "link": "https://www.w3.org/TR/webgpu/",
+        "tags": ["文档"]
+      }
+    ]
+  }
+}

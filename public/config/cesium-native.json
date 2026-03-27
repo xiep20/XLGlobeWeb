@@ -1,0 +1,69 @@
+{
+  "treeData": [{
+    "id": "layerLoad",
+    "label": "地图加载",
+    "icon": "ditu",
+    "children": [
+      {
+        "id": "tdt",
+        "title": "天地图加载",
+        "description": "天地图WMTS服务示例，展示如何使用Cesium加载天地图WMTS服务。",
+        "image": "images/menu/baselayer/online/tdt.png",
+        "type": "md",
+        "path": "cesiumDemo/pages/tdt/tdt.md",
+        "tags": ["天地图", "WMTS服务"]
+      }
+    ]
+  },{
+    "id": "layerAnalysis",
+    "label": "地图分析",
+    "icon": "ditu",
+    "children": [
+      {
+        "id": "slope",
+        "title": "地形坡度分析",
+        "description": "地形坡度分析示例，展示如何使用Cesium计算和可视化地形坡度。",
+        "image": "images/menu/analysis/slope.png",
+        "type": "md",
+        "path": "cesiumDemo/pages/slope/slope.md",
+        "tags": ["坡度分析", "地形分析"]
+      },
+      {
+        "id": "flatten",
+        "title": "模型压平",
+        "description": "模型压平示例，展示如何使用Cesium加载模型压平。",
+        "image": "images/menu/analysis/flatten.png",
+        "type": "md",
+        "path": "cesiumDemo/pages/flatten/flattenTileset.md",
+        "tags": ["模型压平", "着色器"]
+      },
+      {
+        "id": "buildingSetback",
+        "title": "建筑退让",
+        "description": "建筑退让示例，展示如何使用Cesium加载建筑退让。",
+        "image": "images/menu/analysis/buildingSetback.png",
+        "type": "md",
+        "path": "cesiumDemo/pages/buildingSetback/buildingSetback.md",
+        "tags": ["建筑退让", "相交分析"]
+      },
+      {
+        "id": "buildingSpacing",
+        "title": "建筑间距",
+        "description": "建筑间距示例，展示如何使用Cesium加载建筑间距。",
+        "image": "images/menu/analysis/buildingSpacing.png",
+        "type": "md",
+        "path": "cesiumDemo/pages/buildingSpacing/buildingSpacing.md",
+        "tags": ["建筑间距", "缓冲分析"]
+      },
+      {
+        "id": "heightLimit",
+        "title": "限高分析",
+        "description": "限高分析示例，展示如何使用Cesium加载限高分析。",
+        "image": "images/menu/analysis/heightLimit.png",
+        "type": "md",
+        "path": "cesiumDemo/pages/heightLimit/heightLimit.md",
+        "tags": ["限高分析"]
+      }
+    ]
+  }]
+}

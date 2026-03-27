@@ -1,5 +1,43 @@
 {
   "url": {
     "base_url": ""
-  }
+  },
+  "menuList": [
+    {
+      "name": "首页",
+      "path": "/index",
+      "icon": "home",
+      "children": []
+    },
+    {
+      "name": "功能示例",
+      "path": "/functional-example",
+      "icon": "example",
+      "children": []
+    },
+    {
+      "name": "原生Cesium",
+      "path": "/cesium-native",
+      "icon": "cesium",
+      "children": []
+    },
+    {
+      "name": "ThreeJS",
+      "path": "/threejs",
+      "icon": "three",
+      "children": []
+    },
+    {
+      "name": "WebGPU",
+      "path": "/webgpu",
+      "icon": "gpu",
+      "children": []
+    },
+    {
+      "name": "场景示例",
+      "path": "/scene-example",
+      "icon": "scene",
+      "children": []
+    }
+  ]
 }

@@ -1,0 +1,2461 @@
+{
+  "treeData": [{
+        "id": "baselayer",
+        "label": "基础底图",
+        "icon": "ditu",
+        "children": [
+          {
+            "id": "baselayer/online",
+            "label": "在线地图",
+            "children": [
+              {
+                "id": "tdt",
+                "title": "天地图",
+                "description": "天地图示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/online/tdt.png",
+                "type": "editor",
+                "editorType": "baselayer/online",
+                "editorExample": "tdt",
+                "editorLabel": "天地图",
+                "tags": []
+              },
+              {
+                "id": "baidu",
+                "title": "百度",
+                "description": "百度 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/online/baidu.png",
+                "type": "editor",
+                "editorType": "baselayer/online",
+                "editorExample": "baidu",
+                "editorLabel": "百度",
+                "tags": []
+              },
+              {
+                "id": "amap",
+                "title": "高德",
+                "description": "高德 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/online/amap.png",
+                "type": "editor",
+                "editorType": "baselayer/online",
+                "editorExample": "amap",
+                "editorLabel": "高德",
+                "tags": []
+              },
+              {
+                "id": "google",
+                "title": "谷歌",
+                "description": "谷歌 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/online/google.png",
+                "type": "editor",
+                "editorType": "baselayer/online",
+                "editorExample": "google",
+                "editorLabel": "谷歌",
+                "tags": []
+              },
+              {
+                "id": "bingmap",
+                "title": "微软BingMap",
+                "description": "微软BingMap 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/online/bingmap.png",
+                "type": "editor",
+                "editorType": "baselayer/online",
+                "editorExample": "bingmap",
+                "editorLabel": "微软BingMap",
+                "tags": []
+              },
+              {
+                "id": "arcgis",
+                "title": "Arcgis",
+                "description": "Arcgis 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/online/arcgis.png",
+                "type": "editor",
+                "editorType": "baselayer/online",
+                "editorExample": "arcgis",
+                "editorLabel": "Arcgis",
+                "tags": []
+              },
+              {
+                "id": "OSM",
+                "title": "OSM",
+                "description": "OSM 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/online/OSM.png",
+                "type": "editor",
+                "editorType": "baselayer/online",
+                "editorExample": "OSM",
+                "editorLabel": "OSM",
+                "tags": []
+              },
+              {
+                "id": "mapbox",
+                "title": "mapbox",
+                "description": "mapbox 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/online/mapbox.png",
+                "type": "editor",
+                "editorType": "baselayer/online",
+                "editorExample": "mapbox",
+                "editorLabel": "mapbox",
+                "tags": []
+              },
+              {
+                "id": "pbf",
+                "title": "pbf",
+                "description": "pbf 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/online/pbf.png",
+                "type": "editor",
+                "editorType": "baselayer/online",
+                "editorExample": "pbf",
+                "editorLabel": "pbf",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "baselayer/custommap",
+            "label": "自定义地图",
+            "children": [
+              {
+                "id": "oneimg",
+                "title": "本地单张图片",
+                "description": "本地单张图片 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/custommap/oneimg.png",
+                "type": "editor",
+                "editorType": "baselayer/custommap",
+                "editorExample": "oneimg",
+                "editorLabel": "本地单张图片",
+                "tags": []
+              },
+              {
+                "id": "oneimg_night",
+                "title": "本地单张图片（夜晚）",
+                "description": "本地单张图片（夜晚）示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/custommap/oneimg_night.png",
+                "type": "editor",
+                "editorType": "baselayer/custommap",
+                "editorExample": "oneimg_night",
+                "editorLabel": "本地单张图片（夜晚）",
+                "tags": []
+              },
+              {
+                "id": "xyz",
+                "title": "xyz金字塔瓦片",
+                "description": "xyz金字塔瓦片示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/custommap/xyz.png",
+                "type": "editor",
+                "editorType": "baselayer/custommap",
+                "editorExample": "xyz",
+                "editorLabel": "xyz金字塔瓦片",
+                "tags": []
+              },
+              {
+                "id": "arcgistile",
+                "title": "arcgis格式瓦片",
+                "description": "arcgis格式瓦片 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/custommap/arcgistile.png",
+                "type": "editor",
+                "editorType": "baselayer/custommap",
+                "editorExample": "arcgistile",
+                "editorLabel": "arcgis格式瓦片",
+                "tags": []
+              },
+              {
+                "id": "arcgisserver",
+                "title": "ArcGIS Server服务",
+                "description": "ArcGIS Server服务 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/custommap/arcgisserver.png",
+                "type": "editor",
+                "editorType": "baselayer/custommap",
+                "editorExample": "arcgisserver",
+                "editorLabel": "ArcGIS Server服务",
+                "tags": []
+              },
+              {
+                "id": "WMSserver",
+                "title": " OGC WMS服务",
+                "description": " OGC WMS服务 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/custommap/WMSserver.png",
+                "type": "editor",
+                "editorType": "baselayer/custommap",
+                "editorExample": "WMSserver",
+                "editorLabel": " OGC WMS服务",
+                "tags": []
+              },
+              {
+                "id": "wmtsserver",
+                "title": "OGC WMTS服务",
+                "description": "OGC WMTS服务 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/custommap/wmtsserver.png",
+                "type": "editor",
+                "editorType": "baselayer/custommap",
+                "editorExample": "wmtsserver",
+                "editorLabel": "OGC WMTS服务",
+                "tags": []
+              },
+              {
+                "id": "e4490tile",
+                "title": "EPSG4490坐标系",
+                "description": "EPSG4490坐标系示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/custommap/e4490tile.png",
+                "type": "editor",
+                "editorType": "baselayer/custommap",
+                "editorExample": "e4490tile",
+                "editorLabel": "EPSG4490坐标系",
+                "tags": []
+              },
+              {
+                "id": "cloud",
+                "title": "时空效果(云图)",
+                "description": "时空效果(云图) 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/custommap/cloud.gif",
+                "type": "editor",
+                "editorType": "baselayer/custommap",
+                "editorExample": "cloud",
+                "editorLabel": "时空效果(云图)",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "baselayer/ter",
+            "label": "地形",
+            "children": [
+              {
+                "id": "terrain",
+                "title": "地形",
+                "description": "地形 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/ter/terrain.png",
+                "type": "editor",
+                "editorType": "baselayer/ter",
+                "editorExample": "terrain",
+                "editorLabel": "地形",
+                "tags": []
+              },
+              {
+                "id": "terrainExaggeration",
+                "title": "地形夸张",
+                "description": "地形夸张 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/ter/terrainExaggeration.png",
+                "type": "editor",
+                "editorType": "baselayer/ter",
+                "editorExample": "terrainExaggeration",
+                "editorLabel": "地形夸张",
+                "tags": []
+              },
+              {
+                "id": "ter_arcgis",
+                "title": "arcgis地形",
+                "description": "arcgis地形 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/ter/ter_arcgis.png",
+                "type": "editor",
+                "editorType": "baselayer/ter",
+                "editorExample": "ter_arcgis",
+                "editorLabel": "arcgis地形",
+                "tags": []
+              },
+              {
+                "id": "ter_tdt",
+                "title": "天地图地形",
+                "description": "天地图地形示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/ter/ter_tdt.png",
+                "type": "editor",
+                "editorType": "baselayer/ter",
+                "editorExample": "ter_tdt",
+                "editorLabel": "天地图地形",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "baselayer/setting",
+            "label": "地图效果",
+            "children": [
+              {
+                "id": "param",
+                "title": "底图参数",
+                "description": "底图参数 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/setting/param.png",
+                "type": "editor",
+                "editorType": "baselayer/setting",
+                "editorExample": "param",
+                "editorLabel": "底图参数",
+                "tags": []
+              },
+              {
+                "id": "split",
+                "title": "双图对比",
+                "description": "双图对比 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/baselayer/setting/split.png",
+                "type": "editor",
+                "editorType": "baselayer/setting",
+                "editorExample": "split",
+                "editorLabel": "双图对比",
+                "tags": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "layer",
+        "label": "数据图层",
+        "icon": "shuju",
+        "children": [
+          {
+            "id": "layer/dataLayer",
+            "label": "数据图层",
+            "children": [
+              {
+                "id": "vector",
+                "title": "矢量图层",
+                "description": "矢量图层 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/layer/dataLayer/vector.png",
+                "type": "editor",
+                "editorType": "layer/dataLayer",
+                "editorExample": "vector",
+                "editorLabel": "矢量图层",
+                "tags": []
+              },
+              {
+                "id": "cluster",
+                "title": "聚合图层",
+                "description": "聚合图层 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/layer/dataLayer/cluster.png",
+                "type": "editor",
+                "editorType": "layer/dataLayer",
+                "editorExample": "cluster",
+                "editorLabel": "聚合图层",
+                "tags": []
+              },
+              {
+                "id": "dtiles",
+                "title": "3DTiles图层",
+                "description": "3DTiles图层 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/layer/dataLayer/dtiles.png",
+                "type": "editor",
+                "editorType": "layer/dataLayer",
+                "editorExample": "dtiles",
+                "editorLabel": "3DTiles图层",
+                "tags": []
+              },
+              {
+                "id": "geojson",
+                "title": "GeoJson图层",
+                "description": "GeoJson图层 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/layer/dataLayer/geojson.png",
+                "type": "editor",
+                "editorType": "layer/dataLayer",
+                "editorExample": "geojson",
+                "editorLabel": "GeoJson图层",
+                "tags": []
+              },
+              {
+                "id": "html",
+                "title": "Html图层",
+                "description": "Html图层 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/layer/dataLayer/html.png",
+                "type": "editor",
+                "editorType": "layer/dataLayer",
+                "editorExample": "html",
+                "editorLabel": "Html图层",
+                "tags": []
+              },
+              {
+                "id": "czml",
+                "title": "Czml图层",
+                "description": "Czml图层 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/layer/dataLayer/czml.gif",
+                "type": "editor",
+                "editorType": "layer/dataLayer",
+                "editorExample": "czml",
+                "editorLabel": "Czml图层",
+                "tags": []
+              },
+              {
+                "id": "wfsService",
+                "title": "WFS矢量服务",
+                "description": "WFS矢量服务 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/layer/dataLayer/wfsService.png",
+                "type": "editor",
+                "editorType": "layer/dataLayer",
+                "editorExample": "wfsService",
+                "editorLabel": "WFS矢量服务",
+                "tags": []
+              },
+              {
+                "id": "autoPointOnModel",
+                "title": "矢量点自动贴模型",
+                "description": "矢量点自动贴模型 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/layer/dataLayer/autoPointOnModel.png",
+                "type": "editor",
+                "editorType": "layer/dataLayer",
+                "editorExample": "autoPointOnModel",
+                "editorLabel": "矢量点自动贴模型",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "layer/onlineServices",
+            "label": "在线服务支持",
+            "children": [
+              {
+                "id": "onlineServices_gaode",
+                "title": "高德POI查询",
+                "description": "高德POI查询 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/layer/onlineServices/onlineServices_gaode.png",
+                "type": "editor",
+                "editorType": "layer/onlineServices",
+                "editorExample": "onlineServices_gaode",
+                "editorLabel": "高德POI查询",
+                "tags": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "overlay",
+        "label": "矢量要素",
+        "icon": "shiliang",
+        "children": [
+          {
+            "id": "overlay/point",
+            "label": "点要素",
+            "children": [
+              {
+                "id": "point_base",
+                "title": "基本点",
+                "description": "基本点示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/point_base.png",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "point_base",
+                "editorLabel": "基本点",
+                "tags": []
+              },
+              {
+                "id": "point_text",
+                "title": "文字点",
+                "description": "文字点示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/point_text.png",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "point_text",
+                "editorLabel": "文字点",
+                "tags": []
+              },
+              {
+                "id": "point_icon",
+                "title": "图标点",
+                "description": "图标点示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/point_icon.png",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "point_icon",
+                "editorLabel": "图标点",
+                "tags": []
+              },
+              {
+                "id": "point_icon_m",
+                "title": "一万图标点",
+                "description": "一万图标点 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/point_icon_m.png",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "point_icon_m",
+                "editorLabel": "一万图标点",
+                "tags": []
+              },
+              {
+                "id": "Billboard",
+                "title": "Billboard 图标",
+                "description": "Billboard 图标示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/Billboard.png",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "Billboard",
+                "editorLabel": "Billboard 图标",
+                "tags": []
+              },
+              {
+                "id": "point_style",
+                "title": "样式点",
+                "description": "样式点示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/point_style.png",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "point_style",
+                "editorLabel": "样式点",
+                "tags": []
+              },
+              {
+                "id": "point_div",
+                "title": "div文本点",
+                "description": "div文本点示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/point_div.png",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "point_div",
+                "editorLabel": "div文本点",
+                "tags": []
+              },
+              {
+                "id": "point_svg",
+                "title": "div文本点图片",
+                "description": "div文本点图片 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/point_svg.png",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "point_svg",
+                "editorLabel": "div文本点图片",
+                "tags": []
+              },
+              {
+                "id": "point_gif",
+                "title": "Gif动画图片支持",
+                "description": "Gif动画图片支持 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/point_gif.gif",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "point_gif",
+                "editorLabel": "Gif动画图片支持",
+                "tags": []
+              },
+              {
+                "id": "point_dynamic",
+                "title": "动态效果点",
+                "description": "动态效果点 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/point_dynamic.gif",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "point_dynamic",
+                "editorLabel": "动态效果点",
+                "tags": []
+              },
+              {
+                "id": "point_tetrahedron",
+                "title": "四棱锥",
+                "description": "四棱锥示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/point_tetrahedron.gif",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "point_tetrahedron",
+                "editorLabel": "四棱锥",
+                "tags": []
+              },
+              {
+                "id": "point_time",
+                "title": "实时数据",
+                "description": "实时数据 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/point_time.png",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "point_time",
+                "editorLabel": "实时数据",
+                "tags": []
+              },
+              {
+                "id": "point_weibo",
+                "title": "微博点亮中国",
+                "description": "微博点亮中国 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/point/point_weibo.png",
+                "type": "editor",
+                "editorType": "overlay/point",
+                "editorExample": "point_weibo",
+                "editorLabel": "微博点亮中国",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "overlay/polyline",
+            "label": "线状要素",
+            "children": [
+              {
+                "id": "polyline_base",
+                "title": "基本线",
+                "description": "基本线示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polyline/polyline_base.png",
+                "type": "editor",
+                "editorType": "overlay/polyline",
+                "editorExample": "polyline_base",
+                "editorLabel": "基本线",
+                "tags": []
+              },
+              {
+                "id": "polyline_material",
+                "title": "材质线",
+                "description": "材质线示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polyline/polyline_material.png",
+                "type": "editor",
+                "editorType": "overlay/polyline",
+                "editorExample": "polyline_material",
+                "editorLabel": "材质线",
+                "tags": []
+              },
+              {
+                "id": "polyline_trail",
+                "title": "轨迹线",
+                "description": "轨迹线示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polyline/polyline_trail.gif",
+                "type": "editor",
+                "editorType": "overlay/polyline",
+                "editorExample": "polyline_trail",
+                "editorLabel": "轨迹线",
+                "tags": []
+              },
+              {
+                "id": "polyline_halo",
+                "title": "光晕线",
+                "description": "光晕线示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polyline/polyline_halo.png",
+                "type": "editor",
+                "editorType": "overlay/polyline",
+                "editorExample": "polyline_halo",
+                "editorLabel": "光晕线",
+                "tags": []
+              },
+              {
+                "id": "polyline_dynamic",
+                "title": "动态线",
+                "description": "动态线 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polyline/polyline_dynamic.gif",
+                "type": "editor",
+                "editorType": "overlay/polyline",
+                "editorExample": "polyline_dynamic",
+                "editorLabel": "动态线",
+                "tags": []
+              },
+              {
+                "id": "polyline_flow",
+                "title": "流动线",
+                "description": "流动线示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polyline/polyline_flow.gif",
+                "type": "editor",
+                "editorType": "overlay/polyline",
+                "editorExample": "polyline_flow",
+                "editorLabel": "流动线",
+                "tags": []
+              },
+              {
+                "id": "polyline_parabola",
+                "title": "抛物线",
+                "description": "抛物线示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polyline/polyline_parabola.gif",
+                "type": "editor",
+                "editorType": "overlay/polyline",
+                "editorExample": "polyline_parabola",
+                "editorLabel": "抛物线",
+                "tags": []
+              },
+              {
+                "id": "polyline_Gradient_wall",
+                "title": "渐变纹理",
+                "description": "渐变纹理示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polyline/polyline_Gradient_wall.png",
+                "type": "editor",
+                "editorType": "overlay/polyline",
+                "editorExample": "polyline_Gradient_wall",
+                "editorLabel": "渐变纹理",
+                "tags": []
+              },
+              {
+                "id": "road",
+                "title": "道路",
+                "description": "道路 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polyline/road.png",
+                "type": "editor",
+                "editorType": "overlay/polyline",
+                "editorExample": "road",
+                "editorLabel": "道路",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "overlay/polygon",
+            "label": "面状要素",
+            "children": [
+              {
+                "id": "polygon_base",
+                "title": "基本线",
+                "description": "基本线示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polygon/polygon_base.png",
+                "type": "editor",
+                "editorType": "overlay/polygon",
+                "editorExample": "polygon_base",
+                "editorLabel": "基本线",
+                "tags": []
+              },
+              {
+                "id": "polygon_height",
+                "title": "高度线",
+                "description": "高度线示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polygon/polygon_height.png",
+                "type": "editor",
+                "editorType": "overlay/polygon",
+                "editorExample": "polygon_height",
+                "editorLabel": "高度线",
+                "tags": []
+              },
+              {
+                "id": "polygon_isosurface",
+                "title": "等值面",
+                "description": "等值面 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polygon/polygon_isosurface.png",
+                "type": "editor",
+                "editorType": "overlay/polygon",
+                "editorExample": "polygon_isosurface",
+                "editorLabel": "等值面",
+                "tags": []
+              },
+              {
+                "id": "polygon_DynamicStereoscopicWall",
+                "title": "动态立体围栏",
+                "description": "动态立体围栏示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polygon/polygon_DynamicStereoscopicWall.gif",
+                "type": "editor",
+                "editorType": "overlay/polygon",
+                "editorExample": "polygon_DynamicStereoscopicWall",
+                "editorLabel": "动态立体围栏",
+                "tags": []
+              },
+              {
+                "id": "polygon_diffusionWall",
+                "title": "围墙扩散动画",
+                "description": "围墙扩散动画 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polygon/polygon_diffusionWall.gif",
+                "type": "editor",
+                "editorType": "overlay/polygon",
+                "editorExample": "polygon_diffusionWall",
+                "editorLabel": "围墙扩散动画",
+                "tags": []
+              },
+              {
+                "id": "polygon_sectors",
+                "title": "非规则面（扇形）",
+                "description": "非规则面（扇形） 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polygon/polygon_sectors.png",
+                "type": "editor",
+                "editorType": "overlay/polygon",
+                "editorExample": "polygon_sectors",
+                "editorLabel": "非规则面（扇形）",
+                "tags": []
+              },
+              {
+                "id": "polygon_textIcon",
+                "title": "文字贴图",
+                "description": "文字贴图 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polygon/polygon_textIcon.png",
+                "type": "editor",
+                "editorType": "overlay/polygon",
+                "editorExample": "polygon_textIcon",
+                "editorLabel": "文字贴图",
+                "tags": []
+              },
+              {
+                "id": "polygon_OSMBuilding",
+                "title": "OSMBuilding立体建筑",
+                "description": "OSMBuilding立体建筑示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polygon/polygon_OSMBuilding.png",
+                "type": "editor",
+                "editorType": "overlay/polygon",
+                "editorExample": "polygon_OSMBuilding",
+                "editorLabel": "OSMBuilding立体建筑",
+                "tags": []
+              },
+              {
+                "id": "polygon_Building_Shining",
+                "title": "立体建筑闪烁",
+                "description": "立体建筑闪烁 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/polygon/polygon_Building_Shining.gif",
+                "type": "editor",
+                "editorType": "overlay/polygon",
+                "editorExample": "polygon_Building_Shining",
+                "editorLabel": "立体建筑闪烁",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "overlay/others",
+            "label": "其他要素",
+            "children": [
+              {
+                "id": "circle_default",
+                "title": "默认点",
+                "description": "默认点示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/others/circle_default.png",
+                "type": "editor",
+                "editorType": "overlay/others",
+                "editorExample": "circle_default",
+                "editorLabel": "默认点",
+                "tags": []
+              },
+              {
+                "id": "circle_style",
+                "title": "样式点",
+                "description": "样式点示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/others/circle_style.png",
+                "type": "editor",
+                "editorType": "overlay/others",
+                "editorExample": "circle_style",
+                "editorLabel": "样式点",
+                "tags": []
+              },
+              {
+                "id": "circle_rotate",
+                "title": "旋转点",
+                "description": "旋转点示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/others/circle_rotate.png",
+                "type": "editor",
+                "editorType": "overlay/others",
+                "editorExample": "circle_rotate",
+                "editorLabel": "旋转点",
+                "tags": []
+              },
+              {
+                "id": "circle_flicker",
+                "title": "闪烁点",
+                "description": "闪烁点示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/others/circle_flicker.gif",
+                "type": "editor",
+                "editorType": "overlay/others",
+                "editorExample": "circle_flicker",
+                "editorLabel": "闪烁点",
+                "tags": []
+              },
+              {
+                "id": "circle_wave",
+                "title": "波动点",
+                "description": "波动点示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/others/circle_wave.png",
+                "type": "editor",
+                "editorType": "overlay/others",
+                "editorExample": "circle_wave",
+                "editorLabel": "波动点",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "circle_diffusion",
+                "title": "危化品扩散效果",
+                "description": "危化品扩散效果示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/others/circle_diffusion.png",
+                "type": "editor",
+                "editorType": "overlay/others",
+                "editorExample": "circle_diffusion",
+                "editorLabel": "危化品扩散效果",
+                "tags": []
+              },
+              {
+                "id": "circle_radar",
+                "title": "相控阵雷达",
+                "description": "相控阵雷达示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/others/circle_radar.png",
+                "type": "editor",
+                "editorType": "overlay/others",
+                "editorExample": "circle_radar",
+                "editorLabel": "相控阵雷达",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "circle_radar2",
+                "title": "雷达范围",
+                "description": "雷达范围 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/others/circle_radar2.png",
+                "type": "editor",
+                "editorType": "overlay/others",
+                "editorExample": "circle_radar2",
+                "editorLabel": "雷达范围",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "circle_cone",
+                "title": "动态圆锥体",
+                "description": "动态圆锥体 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/others/circle_cone.gif",
+                "type": "editor",
+                "editorType": "overlay/others",
+                "editorExample": "circle_cone",
+                "editorLabel": "动态圆锥体",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "overlay/plot",
+            "label": "标绘",
+            "children": [
+              {
+                "id": "plot-overlay",
+                "title": "要素标绘",
+                "description": "要素标绘 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/plot/plot-overlay.png",
+                "type": "editor",
+                "editorType": "overlay/plot",
+                "editorExample": "plot-overlay",
+                "editorLabel": "要素标绘",
+                "tags": []
+              },
+              {
+                "id": "plot-Military",
+                "title": "军事标绘",
+                "description": "军事标绘 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/overlay/plot/plot-Military.png",
+                "type": "editor",
+                "editorType": "overlay/plot",
+                "editorExample": "plot-Military",
+                "editorLabel": "军事标绘",
+                "tags": [
+                  "插件"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "model",
+        "label": "模型",
+        "icon": "moxing",
+        "children": [
+          {
+            "id": "model/dtmx",
+            "label": "单体模型",
+            "children": [
+              {
+                "id": "model_fj",
+                "title": "gLTF模型",
+                "description": "gLTF模型 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/dtmx/model_fj.png",
+                "type": "editor",
+                "editorType": "model/dtmx",
+                "editorExample": "model_fj",
+                "editorLabel": "gLTF模型",
+                "tags": []
+              },
+              {
+                "id": "model_dh",
+                "title": "动画模型",
+                "description": "动画模型 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/dtmx/model_dh.gif",
+                "type": "editor",
+                "editorType": "model/dtmx",
+                "editorExample": "model_dh",
+                "editorLabel": "动画模型",
+                "tags": []
+              },
+              {
+                "id": "model_xz",
+                "title": "模型旋转",
+                "description": "模型旋转 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/dtmx/model_xz.gif",
+                "type": "editor",
+                "editorType": "model/dtmx",
+                "editorExample": "model_xz",
+                "editorLabel": "模型旋转",
+                "tags": []
+              },
+              {
+                "id": "model_mxk",
+                "title": "模型库[项目widget]",
+                "description": "模型库[项目widget] 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/dtmx/model_mxk.png",
+                "type": "editor",
+                "editorType": "model/dtmx",
+                "editorExample": "model_mxk",
+                "editorLabel": "模型库[项目widget]",
+                "tags": []
+              },
+              {
+                "id": "model_bdgltf",
+                "title": "本地gltf数据",
+                "description": "本地gltf数据 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/dtmx/model_bdgltf.png",
+                "type": "editor",
+                "editorType": "model/dtmx",
+                "editorExample": "model_bdgltf",
+                "editorLabel": "本地gltf数据",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "model/3dtiles",
+            "label": "3DTiles",
+            "children": [
+              {
+                "id": "model_qxsy",
+                "title": "倾斜摄影",
+                "description": "倾斜摄影 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/3dtiles/model_qxsy.png",
+                "type": "editor",
+                "editorType": "model/3dtiles",
+                "editorExample": "model_qxsy",
+                "editorLabel": "倾斜摄影",
+                "tags": []
+              },
+              {
+                "id": "model_rgmx",
+                "title": "人工模型",
+                "description": "人工模型 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/3dtiles/model_rgmx.png",
+                "type": "editor",
+                "editorType": "model/3dtiles",
+                "editorExample": "model_rgmx",
+                "editorLabel": "人工模型",
+                "tags": []
+              },
+              {
+                "id": "model_csbm",
+                "title": "城市建筑白模",
+                "description": "城市建筑白模 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/3dtiles/model_csbm.png",
+                "type": "editor",
+                "editorType": "model/3dtiles",
+                "editorExample": "model_csbm",
+                "editorLabel": "城市建筑白模",
+                "tags": []
+              },
+              {
+                "id": "model_bim",
+                "title": "BIM数据",
+                "description": "BIM数据 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/3dtiles/model_bim.png",
+                "type": "editor",
+                "editorType": "model/3dtiles",
+                "editorExample": "model_bim",
+                "editorLabel": "BIM数据",
+                "tags": []
+              },
+              {
+                "id": "model_dxgw",
+                "title": "地下管网",
+                "description": "地下管网 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/3dtiles/model_dxgw.png",
+                "type": "editor",
+                "editorType": "model/3dtiles",
+                "editorExample": "model_dxgw",
+                "editorLabel": "地下管网",
+                "tags": []
+              },
+              {
+                "id": "model_dz",
+                "title": "地质模型",
+                "description": "地质模型 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/3dtiles/model_dz.png",
+                "type": "editor",
+                "editorType": "model/3dtiles",
+                "editorExample": "model_dz",
+                "editorLabel": "地质模型",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "model/Monomer",
+            "label": "模型单体化",
+            "children": [
+              {
+                "id": "model_Monomersj",
+                "title": "3dtiles数据内单体化",
+                "description": "3dtiles数据内单体化 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/Monomer/model_Monomersj.png",
+                "type": "editor",
+                "editorType": "model/Monomer",
+                "editorExample": "model_Monomersj",
+                "editorLabel": "3dtiles数据内单体化",
+                "tags": []
+              },
+              {
+                "id": "model_Monomerslm",
+                "title": "矢量面叠加单体化",
+                "description": "矢量面叠加单体化 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/Monomer/model_Monomerslm.png",
+                "type": "editor",
+                "editorType": "model/Monomer",
+                "editorExample": "model_Monomerslm",
+                "editorLabel": "矢量面叠加单体化",
+                "tags": []
+              },
+              {
+                "id": "model_Monomerfc",
+                "title": "模型分层单体化",
+                "description": "模型分层单体化 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/Monomer/model_Monomerfc.png",
+                "type": "editor",
+                "editorType": "model/Monomer",
+                "editorExample": "model_Monomerfc",
+                "editorLabel": "模型分层单体化",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "model/modeledit",
+            "label": "数据编辑控制",
+            "children": [
+              {
+                "id": "model_gcj",
+                "title": "国测局坐标系纠偏",
+                "description": "国测局坐标系纠偏示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/modeledit/model_gcj.png",
+                "type": "editor",
+                "editorType": "model/modeledit",
+                "editorExample": "model_gcj",
+                "editorLabel": "国测局坐标系纠偏",
+                "tags": []
+              },
+              {
+                "id": "model_wzpy",
+                "title": "位置直线偏移(不贴球面)",
+                "description": "位置直线偏移(不贴球面) 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/modeledit/model_wzpy.png",
+                "type": "editor",
+                "editorType": "model/modeledit",
+                "editorExample": "model_wzpy",
+                "editorLabel": "位置直线偏移(不贴球面)",
+                "tags": []
+              },
+              {
+                "id": "model_rgmxeidtwz",
+                "title": "【人工模型】位置编辑",
+                "description": "【人工模型】位置编辑示例，支持在线编辑与实时预览。",
+                "image": "images/menu/model/modeledit/model_rgmxeidtwz.png",
+                "type": "editor",
+                "editorType": "model/modeledit",
+                "editorExample": "model_rgmxeidtwz",
+                "editorLabel": "【人工模型】位置编辑",
+                "tags": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "scene",
+        "label": "场景",
+        "icon": "changjing",
+        "children": [
+          {
+            "id": "scene/contorl",
+            "label": "控件",
+            "children": [
+              {
+                "id": "navigation",
+                "title": "导航",
+                "description": "导航示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/contorl/navigation.png",
+                "type": "editor",
+                "editorType": "scene/contorl",
+                "editorExample": "navigation",
+                "editorLabel": "导航",
+                "tags": []
+              },
+              {
+                "id": "scale",
+                "title": "比例尺",
+                "description": "比例尺示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/contorl/scale.png",
+                "type": "editor",
+                "editorType": "scene/contorl",
+                "editorExample": "scale",
+                "editorLabel": "比例尺",
+                "tags": []
+              },
+              {
+                "id": "zoom",
+                "title": "放大缩小按钮",
+                "description": "放大缩小按钮 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/contorl/zoom.png",
+                "type": "editor",
+                "editorType": "scene/contorl",
+                "editorExample": "zoom",
+                "editorLabel": "放大缩小按钮",
+                "tags": []
+              },
+              {
+                "id": "baselayer",
+                "title": "底图切换控制",
+                "description": "底图切换控制 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/contorl/baselayer.png",
+                "type": "editor",
+                "editorType": "scene/contorl",
+                "editorExample": "baselayer",
+                "editorLabel": "底图切换控制",
+                "tags": []
+              },
+              {
+                "id": "VR",
+                "title": "偏振立体(VR)",
+                "description": "偏振立体(VR) 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/contorl/VR.png",
+                "type": "editor",
+                "editorType": "scene/contorl",
+                "editorExample": "VR",
+                "editorLabel": "偏振立体(VR)",
+                "tags": []
+              },
+              {
+                "id": "mouseLocation",
+                "title": "位置信息状态栏",
+                "description": "位置信息状态栏 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/contorl/mouseLocation.png",
+                "type": "editor",
+                "editorType": "scene/contorl",
+                "editorExample": "mouseLocation",
+                "editorLabel": "位置信息状态栏",
+                "tags": []
+              },
+              {
+                "id": "logo",
+                "title": "logo",
+                "description": "logo 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/contorl/logo.png",
+                "type": "editor",
+                "editorType": "scene/contorl",
+                "editorExample": "logo",
+                "editorLabel": "logo",
+                "tags": []
+              },
+              {
+                "id": "customControl",
+                "title": "自定义控件接口",
+                "description": "自定义控件接口示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/contorl/customControl.png",
+                "type": "editor",
+                "editorType": "scene/contorl",
+                "editorExample": "customControl",
+                "editorLabel": "自定义控件接口",
+                "tags": []
+              },
+              {
+                "id": "positionLocation",
+                "title": "定位控件",
+                "description": "定位控件 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/contorl/positionLocation.png",
+                "type": "editor",
+                "editorType": "scene/contorl",
+                "editorExample": "positionLocation",
+                "editorLabel": "定位控件",
+                "tags": []
+              },
+              {
+                "id": "contextMenu",
+                "title": "右键菜单",
+                "description": "右键菜单 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/contorl/contextMenu.png",
+                "type": "editor",
+                "editorType": "scene/contorl",
+                "editorExample": "contextMenu",
+                "editorLabel": "右键菜单",
+                "tags": []
+              },
+              {
+                "id": "overviewMap",
+                "title": "鹰眼图（leaflet）",
+                "description": "鹰眼图（leaflet）示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/contorl/overviewMap.png",
+                "type": "editor",
+                "editorType": "scene/contorl",
+                "editorExample": "overviewMap",
+                "editorLabel": "鹰眼图（leaflet）",
+                "tags": []
+              },
+              {
+                "id": "printScreen",
+                "title": "导出图片",
+                "description": "导出图片 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/contorl/printScreen.png",
+                "type": "editor",
+                "editorType": "scene/contorl",
+                "editorExample": "printScreen",
+                "editorLabel": "导出图片",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "scene/widget",
+            "label": "场景控制",
+            "children": [
+              {
+                "id": "background",
+                "title": "自定义空间背景图",
+                "description": "自定义空间背景图 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/widget/background.png",
+                "type": "editor",
+                "editorType": "scene/widget",
+                "editorExample": "background",
+                "editorLabel": "自定义空间背景图",
+                "tags": []
+              },
+              {
+                "id": "customSkyBox",
+                "title": "自定义天空盒",
+                "description": "自定义天空盒 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/widget/customSkyBox.png",
+                "type": "editor",
+                "editorType": "scene/widget",
+                "editorExample": "customSkyBox",
+                "editorLabel": "自定义天空盒",
+                "tags": []
+              },
+              {
+                "id": "SkyBoxOnGround",
+                "title": "近地天空盒",
+                "description": "近地天空盒示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/widget/SkyBoxOnGround.png",
+                "type": "editor",
+                "editorType": "scene/widget",
+                "editorExample": "SkyBoxOnGround",
+                "editorLabel": "近地天空盒",
+                "tags": []
+              },
+              {
+                "id": "sceneModePicker",
+                "title": "二维三维切换",
+                "description": "二维三维切换 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/widget/sceneModePicker.png",
+                "type": "editor",
+                "editorType": "scene/widget",
+                "editorExample": "sceneModePicker",
+                "editorLabel": "二维三维切换",
+                "tags": []
+              },
+              {
+                "id": "2DMode",
+                "title": "2D模式",
+                "description": "2D模式 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/widget/2DMode.png",
+                "type": "editor",
+                "editorType": "scene/widget",
+                "editorExample": "2DMode",
+                "editorLabel": "2D模式",
+                "tags": []
+              },
+              {
+                "id": "downloadImg",
+                "title": "场景出图(导出图片)",
+                "description": "场景出图(导出图片) 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/widget/downloadImg.png",
+                "type": "editor",
+                "editorType": "scene/widget",
+                "editorExample": "downloadImg",
+                "editorLabel": "场景出图(导出图片)",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "scene/camera",
+            "label": "相机视角",
+            "children": [
+              {
+                "id": "bookmarkWidget",
+                "title": "视角书签[项目widget]",
+                "description": "视角书签[项目widget] 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/camera/bookmarkWidget.png",
+                "type": "editor",
+                "editorType": "scene/camera",
+                "editorExample": "bookmarkWidget",
+                "editorLabel": "视角书签[项目widget]",
+                "tags": []
+              },
+              {
+                "id": "rotate",
+                "title": "旋转的地球",
+                "description": "旋转的地球示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/camera/rotate.gif",
+                "type": "editor",
+                "editorType": "scene/camera",
+                "editorExample": "rotate",
+                "editorLabel": "旋转的地球",
+                "tags": []
+              },
+              {
+                "id": "historyCamera",
+                "title": "视角历史记录",
+                "description": "视角历史记录 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/camera/historyCamera.png",
+                "type": "editor",
+                "editorType": "scene/camera",
+                "editorExample": "historyCamera",
+                "editorLabel": "视角历史记录",
+                "tags": []
+              },
+              {
+                "id": "limitCamera",
+                "title": "限定视角范围",
+                "description": "限定视角范围 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/camera/limitCamera.png",
+                "type": "editor",
+                "editorType": "scene/camera",
+                "editorExample": "limitCamera",
+                "editorLabel": "限定视角范围",
+                "tags": []
+              },
+              {
+                "id": "pointRaodian",
+                "title": "绕点环绕飞行",
+                "description": "绕点环绕飞行 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/camera/pointRaodian.gif",
+                "type": "editor",
+                "editorType": "scene/camera",
+                "editorExample": "pointRaodian",
+                "editorLabel": "绕点环绕飞行",
+                "tags": []
+              },
+              {
+                "id": "pointSizhou",
+                "title": "原地四周旋转",
+                "description": "原地四周旋转 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/camera/pointSizhou.gif",
+                "type": "editor",
+                "editorType": "scene/camera",
+                "editorExample": "pointSizhou",
+                "editorLabel": "原地四周旋转",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "scene/roaming",
+            "label": "飞行漫游",
+            "children": [
+              {
+                "id": "operaCamera",
+                "title": "相机操作",
+                "description": "相机操作 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/roaming/operaCamera.png",
+                "type": "editor",
+                "editorType": "scene/roaming",
+                "editorExample": "operaCamera",
+                "editorLabel": "相机操作",
+                "tags": []
+              },
+              {
+                "id": "pitchRange",
+                "title": "飞行编辑",
+                "description": "飞行编辑 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/roaming/pitchRange.gif",
+                "type": "editor",
+                "editorType": "scene/roaming",
+                "editorExample": "pitchRange",
+                "editorLabel": "飞行编辑",
+                "tags": []
+              },
+              {
+                "id": "flyRoute",
+                "title": "飞行漫游",
+                "description": "飞行漫游 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/roaming/flyRoute.gif",
+                "type": "editor",
+                "editorType": "scene/roaming",
+                "editorExample": "flyRoute",
+                "editorLabel": "飞行漫游",
+                "tags": []
+              },
+              {
+                "id": "pitchRange1",
+                "title": "飞行漫游(含编辑)",
+                "description": "飞行漫游(含编辑) 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/roaming/pitchRange1.gif",
+                "type": "editor",
+                "editorType": "scene/roaming",
+                "editorExample": "pitchRange1",
+                "editorLabel": "飞行漫游(含编辑)",
+                "tags": []
+              },
+              {
+                "id": "pitchRange2",
+                "title": "飞行路线",
+                "description": "飞行路线 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/roaming/pitchRange2.gif",
+                "type": "editor",
+                "editorType": "scene/roaming",
+                "editorExample": "pitchRange2",
+                "editorLabel": "飞行路线",
+                "tags": []
+              },
+              {
+                "id": "pitchRange3",
+                "title": "贴地表表面漫游",
+                "description": "贴地表表面漫游示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/roaming/pitchRange3.png",
+                "type": "editor",
+                "editorType": "scene/roaming",
+                "editorExample": "pitchRange3",
+                "editorLabel": "贴地表表面漫游",
+                "tags": []
+              },
+              {
+                "id": "pitchRange4",
+                "title": "贴模型表面漫游",
+                "description": "贴模型表面漫游示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/roaming/pitchRange4.gif",
+                "type": "editor",
+                "editorType": "scene/roaming",
+                "editorExample": "pitchRange4",
+                "editorLabel": "贴模型表面漫游",
+                "tags": []
+              },
+              {
+                "id": "pitchRange5",
+                "title": "空中漫游",
+                "description": "空中漫游 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/roaming/pitchRange5.gif",
+                "type": "editor",
+                "editorType": "scene/roaming",
+                "editorExample": "pitchRange5",
+                "editorLabel": "空中漫游",
+                "tags": []
+              },
+              {
+                "id": "pitchRange6",
+                "title": "行人漫游",
+                "description": "行人漫游 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/roaming/pitchRange6.gif",
+                "type": "editor",
+                "editorType": "scene/roaming",
+                "editorExample": "pitchRange6",
+                "editorLabel": "行人漫游",
+                "tags": []
+              },
+              {
+                "id": "pitchRange7",
+                "title": "键盘漫游",
+                "description": "键盘漫游 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/roaming/pitchRange7.png",
+                "type": "editor",
+                "editorType": "scene/roaming",
+                "editorExample": "pitchRange7",
+                "editorLabel": "键盘漫游",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "scene/event",
+            "label": "事件控制",
+            "children": [
+              {
+                "id": "viewer_event",
+                "title": "场景鼠标事件",
+                "description": "场景鼠标事件 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/event/viewer_event.png",
+                "type": "editor",
+                "editorType": "scene/event",
+                "editorExample": "viewer_event",
+                "editorLabel": "场景鼠标事件",
+                "tags": []
+              },
+              {
+                "id": "camera_event",
+                "title": "相机移动事件",
+                "description": "相机移动事件 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/event/camera_event.png",
+                "type": "editor",
+                "editorType": "scene/event",
+                "editorExample": "camera_event",
+                "editorLabel": "相机移动事件",
+                "tags": []
+              },
+              {
+                "id": "render_event",
+                "title": "场景渲染事件",
+                "description": "场景渲染事件 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/event/render_event.png",
+                "type": "editor",
+                "editorType": "scene/event",
+                "editorExample": "render_event",
+                "editorLabel": "场景渲染事件",
+                "tags": []
+              },
+              {
+                "id": "scene_morph",
+                "title": "场景模式转换完成",
+                "description": "场景模式转换完成 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/event/scene_morph.png",
+                "type": "editor",
+                "editorType": "scene/event",
+                "editorExample": "scene_morph",
+                "editorLabel": "场景模式转换完成",
+                "tags": []
+              },
+              {
+                "id": "clock_tick",
+                "title": "时间跳动",
+                "description": "时间跳动 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/event/clock_tick.png",
+                "type": "editor",
+                "editorType": "scene/event",
+                "editorExample": "clock_tick",
+                "editorLabel": "时间跳动",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "scene/effect",
+            "label": "场景特效",
+            "children": [
+              {
+                "id": "intro",
+                "title": "开场动画",
+                "description": "开场动画示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/effect/intro.gif",
+                "type": "editor",
+                "editorType": "scene/effect",
+                "editorExample": "intro",
+                "editorLabel": "开场动画",
+                "tags": []
+              },
+              {
+                "id": "circle_scan",
+                "title": "扫描动画",
+                "description": "扫描动画示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/effect/circle_scan.gif",
+                "type": "editor",
+                "editorType": "scene/effect",
+                "editorExample": "circle_scan",
+                "editorLabel": "扫描动画",
+                "tags": []
+              },
+              {
+                "id": "radar_scan",
+                "title": "雷达扫描",
+                "description": "雷达扫描 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/effect/radar_scan.gif",
+                "type": "editor",
+                "editorType": "scene/effect",
+                "editorExample": "radar_scan",
+                "editorLabel": "雷达扫描",
+                "tags": []
+              },
+              {
+                "id": "brightness",
+                "title": "场景明亮",
+                "description": "场景明亮 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/effect/brightness.png",
+                "type": "editor",
+                "editorType": "scene/effect",
+                "editorExample": "brightness",
+                "editorLabel": "场景明亮",
+                "tags": []
+              },
+              {
+                "id": "night_vision",
+                "title": "夜视场景",
+                "description": "夜视场景 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/effect/night_vision.png",
+                "type": "editor",
+                "editorType": "scene/effect",
+                "editorExample": "night_vision",
+                "editorLabel": "夜视场景",
+                "tags": []
+              },
+              {
+                "id": "rain",
+                "title": "雨天场景",
+                "description": "雨天场景 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/effect/rain.gif",
+                "type": "editor",
+                "editorType": "scene/effect",
+                "editorExample": "rain",
+                "editorLabel": "雨天场景",
+                "tags": []
+              },
+              {
+                "id": "snow",
+                "title": "雪天场景",
+                "description": "雪天场景 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/effect/snow.gif",
+                "type": "editor",
+                "editorType": "scene/effect",
+                "editorExample": "snow",
+                "editorLabel": "雪天场景",
+                "tags": []
+              },
+              {
+                "id": "fog",
+                "title": "雾天场景",
+                "description": "雾天场景 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/effect/fog.png",
+                "type": "editor",
+                "editorType": "scene/effect",
+                "editorExample": "fog",
+                "editorLabel": "雾天场景",
+                "tags": []
+              },
+              {
+                "id": "partical_system",
+                "title": "雨、雪、火焰粒子效果",
+                "description": "雨、雪、火焰粒子效果 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/effect/partical_system.gif",
+                "type": "editor",
+                "editorType": "scene/effect",
+                "editorExample": "partical_system",
+                "editorLabel": "雨、雪、火焰粒子效果",
+                "tags": []
+              },
+              {
+                "id": "partical_system_ex",
+                "title": "粒子效果调试",
+                "description": "粒子效果调试 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/scene/effect/partical_system_ex.gif",
+                "type": "editor",
+                "editorType": "scene/effect",
+                "editorExample": "partical_system_ex",
+                "editorLabel": "粒子效果调试",
+                "tags": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Analysis",
+        "label": "分析",
+        "icon": "analysis",
+        "children": [
+          {
+            "id": "Analysis/spatial_analysis",
+            "label": "空间分析",
+            "children": [
+              {
+                "id": "analysis_Measure",
+                "title": "量算",
+                "description": "量算 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/spatial_analysis/analysis_Measure.png",
+                "type": "editor",
+                "editorType": "Analysis/spatial_analysis",
+                "editorExample": "analysis_Measure",
+                "editorLabel": "量算",
+                "tags": []
+              },
+              {
+                "id": "analysis_profile",
+                "title": "剖面分析",
+                "description": "剖面分析 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/spatial_analysis/analysis_profile.png",
+                "type": "editor",
+                "editorType": "Analysis/spatial_analysis",
+                "editorExample": "analysis_profile",
+                "editorLabel": "剖面分析",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "analysis_flfx",
+                "title": "方量分析",
+                "description": "方量分析 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/spatial_analysis/analysis_flfx.png",
+                "type": "editor",
+                "editorType": "Analysis/spatial_analysis",
+                "editorExample": "analysis_flfx",
+                "editorLabel": "方量分析",
+                "tags": []
+              },
+              {
+                "id": "analysis_buffer",
+                "title": "缓冲分析（实体）",
+                "description": "缓冲分析（实体） 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/spatial_analysis/analysis_buffer.png",
+                "type": "editor",
+                "editorType": "Analysis/spatial_analysis",
+                "editorExample": "analysis_buffer",
+                "editorLabel": "缓冲分析（实体）",
+                "tags": []
+              },
+              {
+                "id": "analysis_buffer2",
+                "title": "缓冲分析（坐标）",
+                "description": "缓冲分析（坐标） 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/spatial_analysis/analysis_buffer2.png",
+                "type": "editor",
+                "editorType": "Analysis/spatial_analysis",
+                "editorExample": "analysis_buffer2",
+                "editorLabel": "缓冲分析（坐标）",
+                "tags": []
+              },
+              {
+                "id": "analysis_tsfx",
+                "title": "通视分析",
+                "description": "通视分析 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/spatial_analysis/analysis_tsfx.png",
+                "type": "editor",
+                "editorType": "Analysis/spatial_analysis",
+                "editorExample": "analysis_tsfx",
+                "editorLabel": "通视分析",
+                "tags": []
+              },
+              {
+                "id": "analysis_ksyfx",
+                "title": "可视域分析",
+                "description": "可视域分析 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/spatial_analysis/analysis_ksyfx.png",
+                "type": "editor",
+                "editorType": "Analysis/spatial_analysis",
+                "editorExample": "analysis_ksyfx",
+                "editorLabel": "可视域分析",
+                "tags": []
+              },
+              {
+                "id": "analysis_sunlight",
+                "title": "日照分析",
+                "description": "日照分析 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/spatial_analysis/analysis_sunlight.gif",
+                "type": "editor",
+                "editorType": "Analysis/spatial_analysis",
+                "editorExample": "analysis_sunlight",
+                "editorLabel": "日照分析",
+                "tags": []
+              },
+              {
+                "id": "analysis_dbtm",
+                "title": "地表透明",
+                "description": "地表透明 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/spatial_analysis/analysis_dbtm.png",
+                "type": "editor",
+                "editorType": "Analysis/spatial_analysis",
+                "editorExample": "analysis_dbtm",
+                "editorLabel": "地表透明",
+                "tags": []
+              },
+              {
+                "id": "analysis_tjxmb",
+                "title": "天际线描边",
+                "description": "天际线描边示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/spatial_analysis/analysis_tjxmb.png",
+                "type": "editor",
+                "editorType": "Analysis/spatial_analysis",
+                "editorExample": "analysis_tjxmb",
+                "editorLabel": "天际线描边",
+                "tags": []
+              }
+            ]
+          },
+          {
+            "id": "Analysis/ter_analysis",
+            "label": "地形模型相关",
+            "children": [
+              {
+                "id": "analysis_dxkw",
+                "title": "地形开挖",
+                "description": "地形开挖示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/ter_analysis/analysis_dxkw.jpg",
+                "type": "editor",
+                "editorType": "Analysis/ter_analysis",
+                "editorExample": "analysis_dxkw",
+                "editorLabel": "地形开挖",
+                "tags": []
+              },
+              {
+                "id": "analysis_dxkwcz",
+                "title": "地形开挖材质",
+                "description": "地形开挖材质 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/ter_analysis/analysis_dxkwcz.jpg",
+                "type": "editor",
+                "editorType": "Analysis/ter_analysis",
+                "editorExample": "analysis_dxkwcz",
+                "editorLabel": "地形开挖材质",
+                "tags": []
+              },
+              {
+                "id": "analysis_dgx",
+                "title": "等高线",
+                "description": "等高线示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/ter_analysis/analysis_dgx.png",
+                "type": "editor",
+                "editorType": "Analysis/ter_analysis",
+                "editorExample": "analysis_dgx",
+                "editorLabel": "等高线",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "analysis_mxpq",
+                "title": "模型剖切",
+                "description": "模型剖切 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/ter_analysis/analysis_mxpq.png",
+                "type": "editor",
+                "editorType": "Analysis/ter_analysis",
+                "editorExample": "analysis_mxpq",
+                "editorLabel": "模型剖切",
+                "tags": []
+              },
+              {
+                "id": "analysis_jzwtx",
+                "title": "建筑物特效",
+                "description": "建筑物特效示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/ter_analysis/analysis_jzwtx.gif",
+                "type": "editor",
+                "editorType": "Analysis/ter_analysis",
+                "editorExample": "analysis_jzwtx",
+                "editorLabel": "建筑物特效",
+                "tags": []
+              },
+              {
+                "id": "clippingPlanes",
+                "title": "模型剪裁（凸多边形）",
+                "description": "模型剪裁（凸多边形） 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/ter_analysis/clippingPlanes.png",
+                "type": "editor",
+                "editorType": "Analysis/ter_analysis",
+                "editorExample": "clippingPlanes",
+                "editorLabel": "模型剪裁（凸多边形）",
+                "tags": []
+              },
+              {
+                "id": "SubmergenceAnalysis",
+                "title": "淹没分析（无源）",
+                "description": "淹没分析（无源） 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/Analysis/ter_analysis/SubmergenceAnalysis.png",
+                "type": "editor",
+                "editorType": "Analysis/ter_analysis",
+                "editorExample": "SubmergenceAnalysis",
+                "editorLabel": "淹没分析（无源）",
+                "tags": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "visualization",
+        "label": "数据可视化",
+        "icon": "keshihua",
+        "children": [
+          {
+            "id": "visualization/visualization_base",
+            "label": "基础可视化",
+            "children": [
+              {
+                "id": "heat",
+                "title": "热区图层",
+                "description": "热区图层 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/visualization_base/heat.png",
+                "type": "editor",
+                "editorType": "visualization/visualization_base",
+                "editorExample": "heat",
+                "editorLabel": "热区图层",
+                "tags": []
+              },
+              {
+                "id": "wendu",
+                "title": "温度",
+                "description": "温度示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/visualization_base/wendu.png",
+                "type": "editor",
+                "editorType": "visualization/visualization_base",
+                "editorExample": "wendu",
+                "editorLabel": "温度",
+                "tags": []
+              },
+              {
+                "id": "windy",
+                "title": "风向",
+                "description": "风向示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/visualization_base/windy.gif",
+                "type": "editor",
+                "editorType": "visualization/visualization_base",
+                "editorExample": "windy",
+                "editorLabel": "风向",
+                "tags": []
+              },
+              {
+                "id": "sptf",
+                "title": "视频投射（立体）",
+                "description": "视频投射（立体） 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/visualization_base/sptf.png",
+                "type": "editor",
+                "editorType": "visualization/visualization_base",
+                "editorExample": "sptf",
+                "editorLabel": "视频投射（立体）",
+                "tags": []
+              },
+              {
+                "id": "sptf2",
+                "title": "视频投射（平面）",
+                "description": "视频投射（平面） 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/visualization_base/sptf2.jpg",
+                "type": "editor",
+                "editorType": "visualization/visualization_base",
+                "editorExample": "sptf2",
+                "editorLabel": "视频投射（平面）",
+                "tags": []
+              },
+              {
+                "id": "sptf3",
+                "title": "视频投射（MP4）",
+                "description": "视频投射（MP4）示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/visualization_base/sptf3.png",
+                "type": "editor",
+                "editorType": "visualization/visualization_base",
+                "editorExample": "sptf3",
+                "editorLabel": "视频投射（MP4）",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "sptf4",
+                "title": "贴物空间投射",
+                "description": "贴物空间投射 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/visualization_base/sptf4.png",
+                "type": "editor",
+                "editorType": "visualization/visualization_base",
+                "editorExample": "sptf4",
+                "editorLabel": "贴物空间投射",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "sptf5",
+                "title": "视频投射(HLS协议)",
+                "description": "视频投射(HLS协议) 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/visualization_base/sptf5.png",
+                "type": "editor",
+                "editorType": "visualization/visualization_base",
+                "editorExample": "sptf5",
+                "editorLabel": "视频投射(HLS协议)",
+                "tags": [
+                  "插件"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "visualization/echarts",
+            "label": "Echarts",
+            "children": [
+              {
+                "id": "e_pm2.5",
+                "title": "散点图 空气质量",
+                "description": "散点图空气质量 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/echarts/e_pm2.5.png",
+                "type": "editor",
+                "editorType": "visualization/echarts",
+                "editorExample": "e_pm2.5",
+                "editorLabel": "散点图 空气质量",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "e_sdt_ts",
+                "title": "散点图 态势",
+                "description": "散点图态势 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/echarts/e_sdt_ts.png",
+                "type": "editor",
+                "editorType": "visualization/echarts",
+                "editorExample": "e_sdt_ts",
+                "editorLabel": "散点图 态势",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "e_plane",
+                "title": "飞机",
+                "description": "飞机 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/echarts/e_plane.gif",
+                "type": "editor",
+                "editorType": "visualization/echarts",
+                "editorExample": "e_plane",
+                "editorLabel": "飞机",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "e_traffic",
+                "title": "北京公交线路",
+                "description": "北京公交线路示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/echarts/e_traffic.png",
+                "type": "editor",
+                "editorType": "visualization/echarts",
+                "editorExample": "e_traffic",
+                "editorLabel": "北京公交线路",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "e_bus_h",
+                "title": "道路热力",
+                "description": "道路热力示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/echarts/e_bus_h.png",
+                "type": "editor",
+                "editorType": "visualization/echarts",
+                "editorExample": "e_bus_h",
+                "editorLabel": "道路热力",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "e_qx",
+                "title": "人口迁徙",
+                "description": "人口迁徙 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/echarts/e_qx.gif",
+                "type": "editor",
+                "editorType": "visualization/echarts",
+                "editorExample": "e_qx",
+                "editorLabel": "人口迁徙",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "e_qx_2",
+                "title": "人口迁徙",
+                "description": "人口迁徙 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/echarts/e_qx_2.gif",
+                "type": "editor",
+                "editorType": "visualization/echarts",
+                "editorExample": "e_qx_2",
+                "editorLabel": "人口迁徙",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "e_wl",
+                "title": "物流线路",
+                "description": "物流线路 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/echarts/e_wl.gif",
+                "type": "editor",
+                "editorType": "visualization/echarts",
+                "editorExample": "e_wl",
+                "editorLabel": "物流线路",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "e_lcx",
+                "title": "流出",
+                "description": "流出示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/echarts/e_lcx.gif",
+                "type": "editor",
+                "editorType": "visualization/echarts",
+                "editorExample": "e_lcx",
+                "editorLabel": "流出",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "e_lrx",
+                "title": "流入",
+                "description": "流入示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/echarts/e_lrx.gif",
+                "type": "editor",
+                "editorType": "visualization/echarts",
+                "editorExample": "e_lrx",
+                "editorLabel": "流入",
+                "tags": [
+                  "插件"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "visualization/mapV",
+            "label": "mapV",
+            "children": [
+              {
+                "id": "m_point",
+                "title": "点",
+                "description": "点示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_point.png",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_point",
+                "editorLabel": "点",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_point_d",
+                "title": "动画",
+                "description": "动画示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_point_d.gif",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_point_d",
+                "editorLabel": "动画",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_point_i",
+                "title": "强度",
+                "description": "强度示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_point_i.png",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_point_i",
+                "editorLabel": "强度",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_weibo",
+                "title": "微博",
+                "description": "微博 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_weibo.gif",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_weibo",
+                "editorLabel": "微博",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_grid",
+                "title": "方格",
+                "description": "方格示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_grid.png",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_grid",
+                "editorLabel": "方格",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_grid_d",
+                "title": "方格动画",
+                "description": "方格动画示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_grid_d.gif",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_grid_d",
+                "editorLabel": "方格动画",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_honeycomb",
+                "title": "蜂巢",
+                "description": "蜂巢示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_honeycomb.png",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_honeycomb",
+                "editorLabel": "蜂巢",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_honeycomb_d",
+                "title": "蜂巢动画",
+                "description": "蜂巢动画示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_honeycomb_d.gif",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_honeycomb_d",
+                "editorLabel": "蜂巢动画",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_polyline",
+                "title": "线",
+                "description": "线示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_polyline.png",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_polyline",
+                "editorLabel": "线",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_polyline_d",
+                "title": "动画",
+                "description": "动画示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_polyline_d.gif",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_polyline_d",
+                "editorLabel": "动画",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_polyline_i",
+                "title": "强度",
+                "description": "强度示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_polyline_i.png",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_polyline_i",
+                "editorLabel": "强度",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_linetime",
+                "title": "动态轨迹",
+                "description": "动态轨迹示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_linetime.gif",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_linetime",
+                "editorLabel": "动态轨迹",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_polyline_f",
+                "title": "强边界图",
+                "description": "强边界图 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_polyline_f.gif",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_polyline_f",
+                "editorLabel": "强边界图",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_beijing",
+                "title": "北京",
+                "description": "北京 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_beijing.png",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_beijing",
+                "editorLabel": "北京",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_qianxi",
+                "title": "迁徙",
+                "description": "迁徙示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_qianxi.gif",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_qianxi",
+                "editorLabel": "迁徙",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "m_qianxi_b",
+                "title": "大迁徙图",
+                "description": "大迁徙图 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/mapV/m_qianxi_b.gif",
+                "type": "editor",
+                "editorType": "visualization/mapV",
+                "editorExample": "m_qianxi_b",
+                "editorLabel": "大迁徙图",
+                "tags": [
+                  "插件"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "visualization/ammo",
+            "label": "ammo物理引擎支持",
+            "children": [
+              {
+                "id": "ammo_clyd",
+                "title": "车辆运动",
+                "description": "车辆运动 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/ammo/ammo_clyd.gif",
+                "type": "editor",
+                "editorType": "visualization/ammo",
+                "editorExample": "ammo_clyd",
+                "editorLabel": "车辆运动",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "ammo_zdqz",
+                "title": "转动（旗子）",
+                "description": "转动（旗子） 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/ammo/ammo_zdqz.gif",
+                "type": "editor",
+                "editorType": "visualization/ammo",
+                "editorExample": "ammo_zdqz",
+                "editorLabel": "转动（旗子）",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "ammo_zdqiu",
+                "title": "转动（球）",
+                "description": "转动（球）示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/ammo/ammo_zdqiu.gif",
+                "type": "editor",
+                "editorType": "visualization/ammo",
+                "editorExample": "ammo_zdqiu",
+                "editorLabel": "转动（球）",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "ammo_zjrt",
+                "title": "撞击（软体）",
+                "description": "撞击（软体） 示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/ammo/ammo_zjrt.gif",
+                "type": "editor",
+                "editorType": "visualization/ammo",
+                "editorExample": "ammo_zjrt",
+                "editorLabel": "撞击（软体）",
+                "tags": [
+                  "插件"
+                ]
+              },
+              {
+                "id": "ammo_zjdlt",
+                "title": "撞击（断裂体）",
+                "description": "撞击（断裂体）示例，支持在线编辑与实时预览。",
+                "image": "images/menu/visualization/ammo/ammo_zjdlt.gif",
+                "type": "editor",
+                "editorType": "visualization/ammo",
+                "editorExample": "ammo_zjdlt",
+                "editorLabel": "撞击（断裂体）",
+                "tags": [
+                  "插件"
+                ]
+              }
+            ]
+          }
+        ]
+      
+  }]
+}

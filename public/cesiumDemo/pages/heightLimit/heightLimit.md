@@ -35,8 +35,8 @@ heightLimit.heightRelative = 50
 heightLimit.heightRelative = 80
 ```
 
-## 示例链接 <p align="right"><a href="#/deveditor?examplePath=/cesiumDemo/pages/heightLimit/heightLimit.html" target="_blank">Demo</a></p>
+## 示例链接 <p align="right"><a href="deveditor?examplePath=cesiumDemo/pages/heightLimit/heightLimit.html" target="_blank">Demo</a></p>
 
-<iframe width="100%" height="430" src="#/deveditor?examplePath=/cesiumDemo/pages/heightLimit/heightLimit.html" sandbox="allow-scripts" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="430" src="deveditor?examplePath=cesiumDemo/pages/heightLimit/heightLimit.html" sandbox="allow-scripts" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 

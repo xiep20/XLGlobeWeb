@@ -137,9 +137,9 @@ if (slopeTool.isAnalysisRunning()) {
 6. **可视化**：使用网格线模式展示分析结果
 7. **统计分析**：计算平均坡度、主要坡度等级等信息
 
-### 示例展示 <p align="right"><a href="#/deveditor?examplePath=/cesiumDemo/pages/slope/landSlope.html" target="_blank">Demo</a></p>
+### 示例展示 <p align="right"><a href="deveditor?examplePath=cesiumDemo/pages/slope/landSlope.html" target="_blank">Demo</a></p>
 
-<iframe width="100%" height="430" src="#/deveditor?examplePath=/cesiumDemo/pages/slope/landSlope.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="430" src="deveditor?examplePath=cesiumDemo/pages/slope/landSlope.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 &emsp; 
 

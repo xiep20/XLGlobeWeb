@@ -103,9 +103,9 @@ flattenTool.setFlatHeight(tileset, 50);
 - `format`: 显式指定坐标格式（可选）
 
 
-### 示例展示 <p align="right"><a href="#/deveditor?examplePath=/cesiumDemo/pages/flatten/flattenTileset.html" target="_blank">Demo</a></p>
+### 示例展示 <p align="right"><a href="deveditor?examplePath=cesiumDemo/pages/flatten/flattenTileset.html" target="_blank">Demo</a></p>
 
-<iframe width="100%" height="430" src="#/deveditor?examplePath=/cesiumDemo/pages/flatten/flattenTileset.html" sandbox="allow-scripts" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="430" src="deveditor?examplePath=cesiumDemo/pages/flatten/flattenTileset.html" sandbox="allow-scripts" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 &emsp; 
 

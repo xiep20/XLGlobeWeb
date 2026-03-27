@@ -1,34 +1,21 @@
-/*
- * @Author: Caven
- * @Date: 2019-12-23 13:28:19
- * @Last Modified by: Caven
- * @Last Modified time: 2020-02-11 10:45:07
+/**
+ * 应用加载器 - Vue3 版本
+ * 负责全局组件注册（通过 import.meta.glob）、不再注册 Element（由 main.js 使用 Element Plus）
  */
-import Vue from 'vue'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
-import 'element-ui/lib/theme-chalk/display.css'
-import 'animate.css'
-// 定义全局总线
-const hub = new Vue()
+const componentFiles = import.meta.glob('@/components/**/index.vue')
 
-class AppLoader {
-  constructor() {
-    Vue.config.productionTip = false
-    // 注册element-ui
-    Vue.use(ElementUI)
-    // 添加总线到Vue原型
-    Vue.use({
-      install(Vue, options) {
-        Vue.prototype.$hub = hub
-      }
-    })
-  }
-
-  install() {
-    return Promise.all([import('@/components'), import('@/loader/HttpLoader')])
+/**
+ * 注册所有 components 下 index.vue 为全局组件（以 name 为组件名）
+ * @param {import('vue').App} app
+ */
+export async function registerComponents(app) {
+  for (const path in componentFiles) {
+    const mod = await componentFiles[path]()
+    const comp = mod.default
+    if (comp && comp.name) {
+      app.component(comp.name, comp)
+    }
   }
 }
 
-const loader = new AppLoader()
-export default loader
+export default { registerComponents }

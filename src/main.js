@@ -1,44 +1,53 @@
-import Vue from 'vue'
-import appLoader from './App.Loader';
-(async () => {
+/**
+ * 入口 - Vue3 + Vite
+ * 先初始化 HTTP，再加载 conf.json，然后注册组件并挂载
+ */
+import { createApp } from 'vue'
+import axios from 'axios'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/display.css'
+import 'animate.css'
+import { installHttp } from './loader/HttpLoader'
+import { registerComponents } from './App.Loader'
+import './themes/index.scss'
+import './themes/iconfont/iconfont.css'
+import 'highlight.js/styles/atom-one-dark.css'
+
+const http = axios.create({ timeout: 15000 })
+http.interceptors.request.use((c) => c, (e) => Promise.reject(e))
+http.interceptors.response.use((r) => r, (e) => Promise.reject(e))
+if (typeof globalThis !== 'undefined') {
+  globalThis.Http = http
+}
+
+const app = createApp(App)
+app.use(router)
+app.use(store)
+app.use(ElementPlus)
+installHttp(app, http)
+
+
+
+async function bootstrap() {
   try {
-    let loaders = await appLoader.install()
-    for (let i = 0; i < loaders.length; i++) {
-      let loader = loaders[i].default
-      if (!loader || !loader.load) continue
-      await loader.load()
+    if (http && typeof http.get === 'function') {
+      const res = await http.get('config/conf.json')
+      if (typeof globalThis !== 'undefined') {
+        globalThis.config = res.data
+      }
     }
-    
-    // 确保 HttpLoader 已经初始化
-    if (global.Http && typeof global.Http.get === 'function') {
-      global.Http.get('config/conf.json')
-        .then(response => {
-          global.config = response.data
-          Promise.all([
-            import('@/App.vue'),
-            import('@/router'),
-            import('@/store')
-          ]).then(([{
-            default: App
-          }, {
-            default: router
-          }, {
-            default: store
-          }]) => {
-            new Vue({
-              router,
-              store,
-              render: h => h(App)
-            }).$mount('#app')
-          })
-        })
-        .catch(e => {
-          console.error('Failed to load config:', e)
-        })
-    } else {
-      console.error('HttpLoader not properly initialized')
+  } catch (e) {
+    console.warn('config/conf.json load failed, using defaults', e)
+    if (typeof globalThis !== 'undefined') {
+      globalThis.config = globalThis.config || {}
     }
-  } catch (error) {
-    console.error('Failed to initialize app:', error)
   }
-})()
+  await registerComponents(app)
+  app.mount('#app')
+}
+
+bootstrap()

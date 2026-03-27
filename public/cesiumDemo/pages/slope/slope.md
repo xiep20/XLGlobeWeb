@@ -127,9 +127,9 @@ slopeTool.clearAnalysis();
 3. **浏览器内存不足**
    - 解决方案：减小最大采样点数或分析区域
 
-## 示例展示 <p align="right"><a href="#/deveditor?examplePath=/cesiumDemo/pages/slope/landSlope.html" target="_blank">Demo</a></p>
+## 示例展示 <p align="right"><a href="deveditor?examplePath=cesiumDemo/pages/slope/landSlope.html" target="_blank">Demo</a></p>
 
-<iframe width="100%" height="430" src="#/deveditor?examplePath=/cesiumDemo/pages/slope/landSlope.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="430" src="deveditor?examplePath=cesiumDemo/pages/slope/landSlope.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 &emsp; 
 

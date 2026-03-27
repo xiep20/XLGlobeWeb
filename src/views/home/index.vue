@@ -1,32 +1,14 @@
 <template>
   <div class="home">
     <div class="banner">
-      <img style="width: 100%" :src="require('@/assets/images/bg.png')" alt />
+      <img style="width: 100%" :src="bgImg" alt />
       <canvas id="cas" style="position: absolute; width: 100%; height: 100%"></canvas>
-      <!-- <canvas
-        id="cas2"
-        style="position: absolute; width: 100%; height: 100%"
-      ></canvas>-->
+      <canvas id="cas2" style="position: absolute; width: 100%; height: 100%"></canvas>
+      <aframeEarth
+        style="position: absolute;width: 15vw;height: 15vw;right: 1vw;top: 2vw;opacity: 0.7;"
+      ></aframeEarth>
       <div class="bannercont">
-        <p class="bannercont_tit">Web三维地图客户端程序开发平台</p>
-        <a href="/XLGlobeBase/" style="margin: 50px 0px; display: block; position: relative; width: fit-content;">
-          <img :src="require('@/assets/images/home/jichukuangjia.png')" style="display: block;" />
-          <span style="
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-size: 22px;
-            font-weight: bold;
-            letter-spacing: 6px;
-            white-space: nowrap;
-            pointer-events: none;
-            text-shadow: 0 2px 8px #7ecbfa, 0 0 2px #fff;
-          ">
-            三维基础平台
-          </span>
-        </a>
+        <p class="bannercont_tit">Web三维地图客户端开发</p>
       </div>
     </div>
     <div class="info">
@@ -34,45 +16,43 @@
         <div class="modulela">
           <div class="btit">
             <div class="module_tit">
-              <h2>XLGlobe三维开发平台</h2>
+              <h2>WebGIS开发示例</h2>
             </div>
-            <div class="module_cen">基于webGL的零客户端插件三维客户端开发平台，可快速构建跨浏览器、交互式的适应丰富应用场景的三维开放平台。</div>
+            <div class="module_cen">
+              基于 Cesium、ThreeJS、WebGPU 的 WebGIS 三维地图开发示例与能力展示平台，
+              覆盖底图与图层、场景与相机、模型与分析、可视化与行业应用等场景。
+            </div>
           </div>
           <div class="bcen">
             <div class="functional">
               <li>
                 <div class="content">
                   <div class="b_icon b_icon_1">
-                    <!-- <img src="@/assets/images/Group1.png" class="icon" /> -->
                     <div class="b_icon-box inner-1-box"></div>
                     <div class="b_icon-box inner-2-box"></div>
                     <div class="b_icon-box inner-3-box"></div>
                     <div class="b_icon-box inner-4-box"></div>
                   </div>
-                  <div class="functionaltitle">快速性构建</div>
+                  <div class="functionaltitle">丰富示例 · 即改即看</div>
                 </div>
               </li>
               <li>
                 <div class="content">
                   <div class="b_icon b_icon_2">
-                    <!-- <img src="@/assets/images/Group2.png" class="icon" /> -->
                     <div class="b_icon-box inner-1-box"></div>
-                    <!-- <div class="b_icon-box inner-2-box"></div>
-                    <div class="b_icon-box inner-3-box"></div>-->
                   </div>
-                  <div class="functionaltitle">跨平台展示</div>
+                  <div class="functionaltitle">开源框架 · 灵活扩展</div>
                 </div>
               </li>
               <li>
                 <div class="content">
                   <div class="b_icon b_icon_3">
-                    <!-- <img src="@/assets/images/Ipsum tristique.png" class="icon" /> -->
                     <div class="b_icon-box inner-1-box"></div>
                     <div class="b_icon-box inner-2-box"></div>
                     <div class="b_icon-box inner-3-box"></div>
                     <div class="b_icon-box inner-4-box"></div>
                   </div>
-                  <div class="functionaltitle">多行业应用</div>
+                  <div class="functionaltitle">行业应用 · 智慧城市</div>
                 </div>
               </li>
             </div>
@@ -119,7 +99,7 @@
                     </svg>
                   </div>
                   <div class="module_cen">
-                    <span>功能完善</span>
+                    <span>示例覆盖全</span>
                   </div>
                 </div>
               </el-col>
@@ -144,7 +124,7 @@
                     </svg>
                   </div>
                   <div class="module_cen">
-                    <span>集成丰富</span>
+                    <span>技术栈多样</span>
                   </div>
                 </div>
               </el-col>
@@ -175,7 +155,7 @@
                     </svg>
                   </div>
                   <div class="module_cen">
-                    <span>简单易学</span>
+                    <span>即改即看</span>
                   </div>
                 </div>
               </el-col>
@@ -210,7 +190,7 @@
                     </svg>
                   </div>
                   <div class="module_cen">
-                    <span>轻量灵活</span>
+                    <span>可复用性</span>
                   </div>
                 </div>
               </el-col>
@@ -219,30 +199,27 @@
           <div class="descon_cen">
             <div class="descon_cen_box descon_cen_box1 is-active">
               <div class="descon_cen_left">
-                <div class="mbox_dtit">功能完善</div>
+                <div class="mbox_dtit">示例覆盖全</div>
                 <div class="mbox-line"></div>
                 <div class="desc">
-                  平台提供了地图数据、要素模型、场景分析、可视化等各类完善的功能。
-                  为开发者节省大量时间精力，并且根据开发者使用反馈，还在不断更新。
-                  还为开发者遇见的问题提供连续的技术支持。
+                  底图与图层、场景与相机、模型与分析、可视化与行业应用等场景均有示例参考，
+                  按模块分类清晰，便于按需查找；示例持续补充更新，覆盖 WebGIS 三维开发常见需求。
                 </div>
               </div>
               <div class="descon_cen_right">
                 <div class="box box1">
                   <div class="mbox_cenpage inner-1-box"></div>
-                  <!-- <div class="mbox_cenpage inner-2-box"></div>
-                  <div class="mbox_cenpage inner-3-box"></div>
-                  <div class="mbox_cenpage inner-4-box"></div>-->
                 </div>
               </div>
             </div>
             <div class="descon_cen_box descon_cen_box2">
               <div class="descon_cen_left">
-                <div class="mbox_dtit">集成丰富</div>
+                <div class="mbox_dtit">技术栈多样</div>
                 <div class="mbox-line"></div>
                 <div class="desc">
-                  平台基于开源项目Cesium进行的二次开发，对Cesium使用进行的改造优化，
-                  根据一般项目使用情况，集成了Echarts、Mapv、Heatmap、Turf等一些第三方常用的地图库或开源库。
+                  以 Cesium 为核心，并扩展 ThreeJS、WebGPU 等能力，满足不同 WebGIS 三维场景需求；
+                  示例中涉及 Echarts、Mapv、Heatmap、Turf 等常用地图与可视化库的集成用法，
+                  可作为技术选型与落地的参考。
                 </div>
               </div>
               <div class="descon_cen_right">
@@ -253,12 +230,11 @@
             </div>
             <div class="descon_cen_box descon_cen_box3">
               <div class="descon_cen_left">
-                <div class="mbox_dtit">简单易学</div>
+                <div class="mbox_dtit">即改即看</div>
                 <div class="mbox-line"></div>
                 <div class="desc">
-                  平台入门简单，学习容易，文档完善。
-                  api完整，提供有大量的示例演示，可轻松学习使用。
-                  平台的内部构建适度灵活，接口使用简洁易用，合理解耦。
+                  功能示例支持在线编辑 JS/HTML 代码并实时运行预览，无需本地搭建即可验证效果；
+                  修改即生效，便于理解逻辑与调试参数，适合快速试错与学习 API 用法。
                 </div>
               </div>
               <div class="descon_cen_right">
@@ -269,12 +245,12 @@
             </div>
             <div class="descon_cen_box descon_cen_box4">
               <div class="descon_cen_left">
-                <div class="mbox_dtit">轻量灵活</div>
+                <div class="mbox_dtit">可复用性</div>
                 <div class="mbox-line"></div>
                 <div class="desc">
-                  轻量级的Web端3D
-                  GIS展示，无需安装插件、支持通用浏览器展示、无其它特殊依赖。
-                  支持大量类型底图的加载，包括天地图、高德、百度、谷歌等在线地图，支持arcgis等各类OGC服务。
+                  示例即文档，代码结构清晰、便于二次开发与拷贝到项目中使用；
+                  无需安装插件，浏览器即可运行，
+                  具备良好的可复用性与可扩展性。
                 </div>
               </div>
               <div class="descon_cen_right">
@@ -286,50 +262,16 @@
           </div>
         </div>
       </div>
-      <!-- <div class="module modulelb">
-        <div class="btit">
-          <div class="module_tit">
-            <h3>功能示例</h3>
-          </div>
-        </div>
-        <div class="bcen">
-          <el-carousel :interval="4000" type="card" height="500px">
-            <el-carousel-item v-for="item in items" :key="item">
-              <el-image :src="item"></el-image>
-            </el-carousel-item>
-          </el-carousel>
-        </div>
-        <div class="bbottom"></div>
-      </div>-->
-      <!-- <div class="module modulelb">
-        <div class="btit">
-          <div class="module_tit">
-            <h3>行业解决方案</h3>
-          </div>
-        </div>
-        <div class="bcen">
-          <el-carousel :interval="4000" type="card">
-            <el-carousel-item
-              v-for="(item, index) in items"
-              :key="index"
-              @click.native="toItem(item)"
-            >
-              <el-image :src="item.url" style="height: 100%"></el-image>
-              <div class="card_label">
-                <div class="card_label-tit">{{ item.name }}</div>
-                <div class="card_label-cen">{{ item.label }}</div>
-              </div>
-            </el-carousel-item>
-          </el-carousel>
-        </div>
-        <div class="bbottom"></div>
-      </div>-->
     </div>
     <ly-foot></ly-foot>
   </div>
 </template>
 <script>
-import LyFoot from '@/layout/LyFoot'
+import LyFoot from '@/layout/LyFoot.vue'
+// import aframeEarth from '@/components/aframeEarth/index.vue'
+import bgImg from '@/assets/images/bg.png'
+import jichukuangjiaImg from '@/assets/images/home/jichukuangjia.png'
+
 export default {
   name: 'HomeIndex',
   components: {
@@ -337,47 +279,9 @@ export default {
   },
   data() {
     return {
-      items: [
-        {
-          url: require('@/assets/images/item/智慧园区.png'),
-          name: '智慧园区',
-          label:
-            '通过GIS促使园区信息化统一管理，利用2、3D可视化技术的便捷性和空间展示、分析的优势，助力园区管理运控。'
-        },
-        {
-          url: require('@/assets/images/item/智慧城管.png'),
-          name: '智慧城管',
-          label:
-            '以新一代信息技术为支撑、辅助信息化城市建设和可持续创新，对城市进行科学化、精细化、智能化管理。'
-        },
-        {
-          url: require('@/assets/images/item/智慧交通.png'),
-          name: '智慧交通',
-          label:
-            '“智慧+交通”智慧赋能交通，促进交通体系高效运行；使交通具备互联、感知、分析、控制、预测能力。'
-        }
-        // require('@/assets/images/pt4.gif'),
-        // require('@/assets/images/pt5.gif'),
-        // require('@/assets/images/pt6.gif'),
-      ],
-      animateCSS: (element, animation, prefix = 'animate__') =>
-        // We create a Promise and return it
-        new Promise((resolve, reject) => {
-          const animationName = `${prefix}${animation}`
-          const node = document.querySelector(element)
-
-          node.classList.add(`${prefix}animated`, animationName)
-
-          // When the animation ends, we clean the classes and resolve the Promise
-          function handleAnimationEnd() {
-            node.classList.remove(`${prefix}animated`, animationName)
-            resolve('Animation ended')
-          }
-
-          node.addEventListener('animationend', handleAnimationEnd, {
-            once: true
-          })
-        })
+      bgImg,
+      jichukuangjiaImg,
+    
     }
   },
   mounted() {
@@ -393,13 +297,13 @@ export default {
             'ly-head bg-head-hide'
         }
       })
-    // this.canvasfun()
+    this.canvasfun2()
     this.initCanvas()
     this.render()
     window.onresize = function() {
       this.initCanvas()
       this.render()
-      // this.canvasfun()
+      this.canvasfun2()
     }
   },
   methods: {
@@ -409,7 +313,7 @@ export default {
     initCanvas() {
       // this.canvas = document.body.querySelector('canvas')
       this.canvas = document.getElementById('cas')
-      this.ctx = this.canvas.getContext('2d')
+      this.ctx = this.canvas.getContext('2d', { willReadFrequently: true }) || this.canvas.getContext('2d')
       this.W = this.canvas.width = window.innerWidth
       this.H = this.canvas.height = (window.innerWidth / 1920) * 700
       this.pixels = []
@@ -464,9 +368,13 @@ export default {
         y2d = pixel.y * scale + this.H / 1.5
         if (x2d >= 0 && x2d <= this.W && y2d >= 0 && y2d <= this.H) {
           c = (Math.round(y2d) * imageData.width + Math.round(x2d)) * 4
-          imageData.data[c] = 17
-          imageData.data[c + 1] = 122 //rgb颜色
-          imageData.data[c + 2] = 181
+          // imageData.data[c] = 17
+          // imageData.data[c + 1] = 122 //rgb颜色
+          // imageData.data[c + 2] = 181
+          // imageData.data[c + 3] = 255
+          imageData.data[c] = 106 //rgb颜色
+          imageData.data[c + 1] = 222
+          imageData.data[c + 2] = 249
           imageData.data[c + 3] = 255
         }
         pixel.z -= 0.4
@@ -477,7 +385,7 @@ export default {
     },
     canvasfun() {
       var canvas = document.getElementById('cas')
-      var ctx = canvas.getContext('2d')
+      var ctx = canvas.getContext('2d', { willReadFrequently: true }) || canvas.getContext('2d')
       var rgb = '150' // 线条颜色值
       var extendDis = 5 // 可超出的画布边界
       var lineDis = 100 // 连线距离
@@ -662,6 +570,371 @@ export default {
         default:
           break
       }
+    },
+    canvasfun2() {
+      var num = 200
+      var w = window.innerWidth
+      var h = window.innerHeight
+      var _x = 0
+      var _y = 0
+      var _z = 150
+      var dtr = function (d) {
+        return (d * Math.PI) / 180
+      }
+
+      var rnd = function () {
+        return Math.sin((Math.floor(Math.random() * 360) * Math.PI) / 180)
+      }
+
+      var cam = {
+        obj: {
+          x: _x,
+          y: _y,
+          z: _z,
+        },
+        dest: {
+          x: 0,
+          y: 0,
+          z: 1,
+        },
+        dist: {
+          x: 0,
+          y: 0,
+          z: 200,
+        },
+        ang: {
+          cplane: 0,
+          splane: 0,
+          ctheta: 0,
+          stheta: 0,
+        },
+        zoom: 1,
+        disp: {
+          x: w / 2,
+          y: h / 2,
+          z: 0,
+        },
+        upd: function () {
+          cam.dist.x = cam.dest.x - cam.obj.x
+          cam.dist.y = cam.dest.y - cam.obj.y
+          cam.dist.z = cam.dest.z - cam.obj.z
+          cam.ang.cplane =
+            -cam.dist.z /
+            Math.sqrt(cam.dist.x * cam.dist.x + cam.dist.z * cam.dist.z)
+          cam.ang.splane =
+            cam.dist.x /
+            Math.sqrt(cam.dist.x * cam.dist.x + cam.dist.z * cam.dist.z)
+          cam.ang.ctheta =
+            Math.sqrt(cam.dist.x * cam.dist.x + cam.dist.z * cam.dist.z) /
+            Math.sqrt(
+              cam.dist.x * cam.dist.x +
+                cam.dist.y * cam.dist.y +
+                cam.dist.z * cam.dist.z
+            )
+          cam.ang.stheta =
+            -cam.dist.y /
+            Math.sqrt(
+              cam.dist.x * cam.dist.x +
+                cam.dist.y * cam.dist.y +
+                cam.dist.z * cam.dist.z
+            )
+        },
+      }
+
+      var trans = {
+        parts: {
+          sz: function (p, sz) {
+            return {
+              x: p.x * sz.x,
+              y: p.y * sz.y,
+              z: p.z * sz.z,
+            }
+          },
+          rot: {
+            x: function (p, rot) {
+              return {
+                x: p.x,
+                y: p.y * Math.cos(dtr(rot.x)) - p.z * Math.sin(dtr(rot.x)),
+                z: p.y * Math.sin(dtr(rot.x)) + p.z * Math.cos(dtr(rot.x)),
+              }
+            },
+            y: function (p, rot) {
+              return {
+                x: p.x * Math.cos(dtr(rot.y)) + p.z * Math.sin(dtr(rot.y)),
+                y: p.y,
+                z: -p.x * Math.sin(dtr(rot.y)) + p.z * Math.cos(dtr(rot.y)),
+              }
+            },
+            z: function (p, rot) {
+              return {
+                x: p.x * Math.cos(dtr(rot.z)) - p.y * Math.sin(dtr(rot.z)),
+                y: p.x * Math.sin(dtr(rot.z)) + p.y * Math.cos(dtr(rot.z)),
+                z: p.z,
+              }
+            },
+          },
+          pos: function (p, pos) {
+            return {
+              x: p.x + pos.x,
+              y: p.y + pos.y,
+              z: p.z + pos.z,
+            }
+          },
+        },
+        pov: {
+          plane: function (p) {
+            return {
+              x: p.x * cam.ang.cplane + p.z * cam.ang.splane,
+              y: p.y,
+              z: p.x * -cam.ang.splane + p.z * cam.ang.cplane,
+            }
+          },
+          theta: function (p) {
+            return {
+              x: p.x,
+              y: p.y * cam.ang.ctheta - p.z * cam.ang.stheta,
+              z: p.y * cam.ang.stheta + p.z * cam.ang.ctheta,
+            }
+          },
+          set: function (p) {
+            return {
+              x: p.x - cam.obj.x,
+              y: p.y - cam.obj.y,
+              z: p.z - cam.obj.z,
+            }
+          },
+        },
+        persp: function (p) {
+          return {
+            x: ((p.x * cam.dist.z) / p.z) * cam.zoom,
+            y: ((p.y * cam.dist.z) / p.z) * cam.zoom,
+            z: p.z * cam.zoom,
+            p: cam.dist.z / p.z,
+          }
+        },
+        disp: function (p, disp) {
+          return {
+            x: p.x + disp.x,
+            y: -p.y + disp.y,
+            z: p.z + disp.z,
+            p: p.p,
+          }
+        },
+        steps: function (_obj_, sz, rot, pos, disp) {
+          var _args = trans.parts.sz(_obj_, sz)
+          _args = trans.parts.rot.x(_args, rot)
+          _args = trans.parts.rot.y(_args, rot)
+          _args = trans.parts.rot.z(_args, rot)
+          _args = trans.parts.pos(_args, pos)
+          _args = trans.pov.plane(_args)
+          _args = trans.pov.theta(_args)
+          _args = trans.pov.set(_args)
+          _args = trans.persp(_args)
+          _args = trans.disp(_args, disp)
+          return _args
+        },
+      }
+
+      ;(function () {
+        'use strict'
+        var threeD = function (param) {
+          this.transIn = {}
+          this.transOut = {}
+          this.transIn.vtx = param.vtx
+          this.transIn.sz = param.sz
+          this.transIn.rot = param.rot
+          this.transIn.pos = param.pos
+        }
+
+        threeD.prototype.vupd = function () {
+          this.transOut = trans.steps(
+            this.transIn.vtx,
+            this.transIn.sz,
+            this.transIn.rot,
+            this.transIn.pos,
+            cam.disp
+          )
+        }
+
+        var Build = function () {
+          this.vel = 0.04
+          this.lim = 360
+          this.diff = 200
+          this.initPos = 100
+          this.toX = _x
+          this.toY = _y
+          this.go()
+        }
+
+        Build.prototype.go = function () {
+          this.canvas = document.getElementById('cas2')
+          this.canvas.width = window.innerWidth
+          this.canvas.height = window.innerHeight
+          this.$ = this.canvas.getContext('2d', { willReadFrequently: true }) || this.canvas.getContext('2d')
+          this.$.globalCompositeOperation = 'source-over'
+          this.varr = []
+          this.dist = []
+          this.calc = []
+
+          for (var i = 0, len = num; i < len; i++) {
+            this.add()
+          }
+
+          this.rotObj = {
+            x: 0,
+            y: 0,
+            z: 0,
+          }
+          this.objSz = {
+            x: w / 5,
+            y: h / 5,
+            z: w / 5,
+          }
+        }
+
+        Build.prototype.add = function () {
+          this.varr.push(
+            new threeD({
+              vtx: {
+                x: rnd(),
+                y: rnd(),
+                z: rnd(),
+              },
+              sz: {
+                x: 0,
+                y: 0,
+                z: 0,
+              },
+              rot: {
+                x: 20,
+                y: -20,
+                z: 0,
+              },
+              pos: {
+                x: this.diff * Math.sin((360 * Math.random() * Math.PI) / 180),
+                y: this.diff * Math.sin((360 * Math.random() * Math.PI) / 180),
+                z: this.diff * Math.sin((360 * Math.random() * Math.PI) / 180),
+              },
+            })
+          )
+          this.calc.push({
+            x: 360 * Math.random(),
+            y: 360 * Math.random(),
+            z: 360 * Math.random(),
+          })
+        }
+
+        Build.prototype.upd = function () {
+          cam.obj.x += (this.toX - cam.obj.x) * 0.05
+          cam.obj.y += (this.toY - cam.obj.y) * 0.05
+        }
+
+        Build.prototype.draw = function () {
+          this.$.clearRect(0, 0, this.canvas.width, this.canvas.height)
+          cam.upd()
+          this.rotObj.x += 0.1
+          this.rotObj.y += 0.1
+          this.rotObj.z += 0.1
+
+          for (var i = 0; i < this.varr.length; i++) {
+            for (var val in this.calc[i]) {
+              if (this.calc[i].hasOwnProperty(val)) {
+                this.calc[i][val] += this.vel
+                if (this.calc[i][val] > this.lim) this.calc[i][val] = 0
+              }
+            }
+
+            this.varr[i].transIn.pos = {
+              x: this.diff * Math.cos((this.calc[i].x * Math.PI) / 180),
+              y: this.diff * Math.sin((this.calc[i].y * Math.PI) / 180),
+              z: this.diff * Math.sin((this.calc[i].z * Math.PI) / 180),
+            }
+            this.varr[i].transIn.rot = this.rotObj
+            this.varr[i].transIn.sz = this.objSz
+            this.varr[i].vupd()
+            if (this.varr[i].transOut.p < 0) continue
+            var g = this.$.createRadialGradient(
+              this.varr[i].transOut.x,
+              this.varr[i].transOut.y,
+              this.varr[i].transOut.p,
+              this.varr[i].transOut.x,
+              this.varr[i].transOut.y,
+              this.varr[i].transOut.p * 2
+            )
+            this.$.globalCompositeOperation = 'lighter'
+            g.addColorStop(0, 'hsla(255, 255%, 255%, 1)')
+            g.addColorStop(0.5, 'hsla(' + (i + 2) + ',85%, 40%,1)')
+            g.addColorStop(1, 'hsla(' + i + ',85%, 40%,.5)')
+            this.$.fillStyle = g
+            this.$.beginPath()
+            this.$.arc(
+              this.varr[i].transOut.x,
+              this.varr[i].transOut.y,
+              this.varr[i].transOut.p * 2,
+              0,
+              Math.PI * 2,
+              false
+            )
+            this.$.fill()
+            this.$.closePath()
+          }
+        }
+        Build.prototype.anim = function () {
+          window.requestAnimationFrame = (function () {
+            return (
+              window.requestAnimationFrame ||
+              function (callback) {
+                window.setTimeout(callback, 1000 / 60)
+              }
+            )
+          })()
+          var anim = function () {
+            this.upd()
+            this.draw()
+            window.requestAnimationFrame(anim)
+          }.bind(this)
+          window.requestAnimationFrame(anim)
+        }
+
+        Build.prototype.run = function () {
+          this.anim()
+
+          window.addEventListener(
+            'mousemove',
+            function (e) {
+              this.toX = (e.clientX - this.canvas.width / 2) * -0.8
+              this.toY = (e.clientY - this.canvas.height / 2) * 0.8
+            }.bind(this)
+          )
+          window.addEventListener(
+            'touchmove',
+            function (e) {
+              e.preventDefault()
+              this.toX = (e.touches[0].clientX - this.canvas.width / 2) * -0.8
+              this.toY = (e.touches[0].clientY - this.canvas.height / 2) * 0.8
+            }.bind(this)
+          )
+          window.addEventListener(
+            'mousedown',
+            function () {
+              for (var i = 0; i < 100; i++) {
+                this.add()
+              }
+            }.bind(this)
+          )
+          window.addEventListener(
+            'touchstart',
+            function (e) {
+              e.preventDefault()
+              for (var i = 0; i < 100; i++) {
+                this.add()
+              }
+            }.bind(this)
+          )
+        }
+        var app = new Build()
+        app.run()
+      })()
     }
   }
 }
@@ -691,7 +964,7 @@ export default {
     width: 100%;
     // height: calc(100%);
     height: auto;
-    background: url('~@/assets/images/bg.png');
+    background: url('../../assets/images/bg.png');
     background-size: 100% 100%;
     overflow: hidden;
     display: flex;
@@ -759,13 +1032,13 @@ export default {
         }
         .b_icon_1 {
           .inner-1-box {
-            background-image: url('~@/assets/images/home/快速性构建/底座.png');
+            background-image: url('../../assets/images/home/M3/底座.png');
           }
           .inner-2-box {
-            background-image: url('~@/assets/images/home/快速性构建/电脑1.png');
+            background-image: url('../../assets/images/home/M3/电脑1.png');
           }
           .inner-3-box {
-            background-image: url('~@/assets/images/home/快速性构建/电脑2.png');
+            background-image: url('../../assets/images/home/M3/电脑2.png');
             animation: boxana2 5s linear infinite;
             -webkit-animation: boxana2 5s linear infinite; /* Safari and Chrome */
           }
@@ -774,25 +1047,24 @@ export default {
             height: 46px;
             left: 25%;
             top: 54%;
-            background-image: url('~@/assets/images/home/快速性构建/机器人.png');
+            background-image: url('../../assets/images/home/M3/机器人.png');
             animation: boxana1 5s linear infinite;
             -webkit-animation: boxana1 5s linear infinite; /* Safari and Chrome */
           }
         }
         .b_icon_2 {
           .inner-1-box {
-            // background-image: url('../../assets/images/home/跨平台展示/底座1.png');
-            background-image: url('~@/assets/images/home/跨平台展示/跨平台展示.gif');
+            background-image: url('../../assets/images/home/M2/跨平台展示.gif');
           }
           .inner-2-box {
-            background-image: url('~@/assets/images/home/跨平台展示/光柱.png');
+            background-image: url('../../assets/images/home/M2/光柱.png');
             width: 86px;
             height: 105px;
             left: 39.5%;
             top: 9.8%;
           }
           .inner-3-box {
-            background-image: url('~@/assets/images/home/跨平台展示/雪花.png');
+            background-image: url('../../assets/images/home/M2/雪花.png');
             width: 87px;
             height: 107px;
             left: 39%;
@@ -803,10 +1075,10 @@ export default {
         }
         .b_icon_3 {
           .inner-1-box {
-            background-image: url('~@/assets/images/home/多行业应用/底座2.png');
+            background-image: url('../../assets/images/home/M1/底座2.png');
           }
           .inner-2-box {
-            background-image: url('~@/assets/images/home/多行业应用/定位.png');
+            background-image: url('../../assets/images/home/M1/定位.png');
             width: 19px;
             height: 27px;
             left: 58%;
@@ -815,7 +1087,7 @@ export default {
             -webkit-animation: boxana4 3s linear infinite; /* Safari and Chrome */
           }
           .inner-3-box {
-            background-image: url('~@/assets/images/home/多行业应用/设置.png');
+            background-image: url('../../assets/images/home/M1/设置.png');
             width: 25px;
             height: 30px;
             left: 43%;
@@ -824,7 +1096,7 @@ export default {
             -webkit-animation: boxana5 3s linear infinite; /* Safari and Chrome */
           }
           .inner-4-box {
-            background-image: url('~@/assets/images/home/多行业应用/小车.png');
+            background-image: url('../../assets/images/home/M1/小车.png');
             width: 21px;
             height: 16px;
             left: 24%;
@@ -1088,7 +1360,7 @@ export default {
               background-size: 100% 100%;
               background-repeat: no-repeat;
               background-position: center;
-              background-image: url('~@/assets/images/home/功能完善.gif');
+              background-image: url('../../assets/images/home/功能完善.gif');
             }
           }
           .box2 {
@@ -1102,7 +1374,7 @@ export default {
               background-size: 100% 100%;
               background-repeat: no-repeat;
               background-position: center;
-              background-image: url('~@/assets/images/home/集成丰富.gif');
+              background-image: url('../../assets/images/home/集成丰富.gif');
             }
           }
           .box3 {
@@ -1116,7 +1388,7 @@ export default {
               background-size: 100% 100%;
               background-repeat: no-repeat;
               background-position: center;
-              background-image: url('~@/assets/images/home/简单易学.gif');
+              background-image: url('../../assets/images/home/简单易学.gif');
             }
           }
           .box4 {
@@ -1130,7 +1402,7 @@ export default {
               background-size: 100% 100%;
               background-repeat: no-repeat;
               background-position: center;
-              background-image: url('~@/assets/images/home/轻量灵活.gif');
+              background-image: url('../../assets/images/home/轻量灵活.gif');
             }
           }
         }

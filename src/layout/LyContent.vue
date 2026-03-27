@@ -24,5 +24,12 @@ export default {
   background: #fff;
   height: calc(100%);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.ly-content > * {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
 }
 </style>

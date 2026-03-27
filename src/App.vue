@@ -13,7 +13,6 @@ export default {
 }
 </script>
 <style lang="scss">
-@import './themes/index.scss';
 #app {
   position: relative;
   width: 100%;

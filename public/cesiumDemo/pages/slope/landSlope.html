@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>地形坡度分析</title>
-    <script src="libs/Cesium1.130/Cesium.js"></script>
-    <script src="libs/turf.min.js"></script>
-    <script src="libs/delaunator.min.js"></script>
-    <link href="libs/Cesium1.130/Widgets/widgets.css" rel="stylesheet">
+    <script src="../../../libs/Cesium1.130/Cesium.js"></script>
+    <script src="../../../libs/turf.min.js"></script>
+    <script src="../../../libs/delaunator.min.js"></script>
+    <link href="../../../libs/Cesium1.130/Widgets/widgets.css" rel="stylesheet">
     <style>
         html, body{
             width: 100%;
@@ -132,7 +132,7 @@
 
     <script type="module">
         // 导入坡度分析工具
-        import LandSlopeAnalysisTool from '/cesiumDemo/pages/slope/landSlope.js';
+        import LandSlopeAnalysisTool from '../../../cesiumDemo/pages/slope/landSlope.js';
         
         // 使用自执行async函数以支持await
         (async function() {

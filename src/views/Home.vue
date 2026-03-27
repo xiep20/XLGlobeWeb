@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import LyHead from '@/layout/LyHead'
-import LyContent from '@/layout/LyContent'
+import LyHead from '@/layout/LyHead.vue'
+import LyContent from '@/layout/LyContent.vue'
 // import LyFoot from '@/layout/LyFoot'
 
 export default {

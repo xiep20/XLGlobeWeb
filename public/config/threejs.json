@@ -1,0 +1,29 @@
+{
+  "treeData": [
+      {
+        "id": "root",
+        "label": "ThreeJS",
+        "icon": "ditu",
+        "children": [
+          {
+        "id": "threejs-basic",
+        "title": "Three.js 基础场景",
+        "description": "Three.js 与 Cesium 结合示例。",
+        "image": "",
+        "type": "demo",
+        "component": "threejs/demos/BasicScene",
+        "tags": ["Three.js", "基础"]
+      },
+      {
+        "id": "threejs-doc",
+        "title": "Three.js 官方文档",
+        "description": "Three.js 文档外链",
+        "image": "",
+        "type": "link",
+        "link": "https://threejs.org/docs/",
+        "tags": ["文档"]
+      }
+    ]
+  }
+  ]
+}

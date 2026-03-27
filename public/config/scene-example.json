@@ -1,0 +1,27 @@
+{
+  "treeData": [{
+    "id": "root",
+    "label": "场景示例",
+    "icon": "ditu",
+    "children": [
+      {
+        "id": "scene-city",
+        "title": "智慧城市场景",
+        "description": "城市级三维场景示例。",
+        "image": "",
+        "type": "demo",
+        "component": "scene-example/demos/CityScene",
+        "tags": ["场景", "城市"]
+      },
+      {
+        "id": "scene-terrain",
+        "title": "地形与影像",
+        "description": "地形与影像叠加示例。",
+        "image": "",
+        "type": "demo",
+        "component": "scene-example/demos/Terrain",
+        "tags": ["地形"]
+      }
+    ]
+  }]
+}
